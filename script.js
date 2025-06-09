@@ -84,3 +84,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('gender-loader');
+    loader.style.display = 'none';
+  }, 3000);
+});
