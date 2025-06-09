@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Gulp Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img class="header__logo" src="img/Prof. Zurab Marshania (3).png" alt="logo" />
+
+        <nav class="header__nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link nav-list__link--active" href="#main-section" data-link
+                >მთავარი</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#bio-section" data-link>ბიოგრაფია</a>
+            </li>
+
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#contact-section" data-link>კონტაქტი</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__language-switcher">
+          <span class="language-switcher__item language-switcher__item--active">GE</span>
+          <span class="language-switcher__item">EN</span>
+          <span class="language-switcher__item">RU</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container" id="main-section">
+        <div class="inSpace">
+          <div class="hero">
+            <h1 class="hero__title">ზურაბ მარშანია</h1>
+            <p class="hero__subtitle">
+              პროფესორი,
+              <!-- <span class="animated-text" id="typing-text"></span> -->
+              <span class="animated-text" id="typing-text"></span><span class="cursor"></span>
+            </p>
+
+            <button class="hero__button">დეტალურად</button>
+          </div>
+          <div>
+            <img class="hero__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პროფილი" />
+          </div>
+        </div>
+      </div>
+
+      <div class="bio" id="bio-section">
+        <div class="bio__container">
+          <img class="bio__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პორტრეტი" />
+
+          <div class="bio__content">
+            <h1 class="bio__title">ბიოგრაფია</h1>
+
+            <h5 class="bio__subtitle">
+              ზურაბ მარშანია - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი და
+              სამეცნიერო საბჭოს თავმჯდომარე პროფესორი
+            </h5>
+
+            <div class="bio__text">
+              <p class="bio__paragraph">
+                ექიმი სექსოლოგი, საქართველოს ეროვნული უნივერსიტეტის (სეუ) ფსიქოლოგიის ფაკულტეტის
+                ასოცირებული პროფესორი, მედიცინის აკადემიური დოქტორი, ვ.ივერიელის სახ.
+                ენდოკრინოლოგია, მეტაბოლოგია, დიეტოლოგიის ცენტრი „ენმედიცი“-ს სექსოლოგიური სამსახურის
+                ხელმძღვანელი, საქართველოს მამაკაცის ჯანმრთელობის ასოციაციის გენერალური მდივანი,
+                სოციალურ და პოლიტიკურ მეცნიერებათა დოქტორი, საგანგებო და სრულუფლებიანი დესპანი.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="contact" id="contact-section">
+        <div class="contact__container">
+          <h1 class="contact__title">კონტაქტი</h1>
+
+          <div class="contact__info">
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#0066cc"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <p class="info-card__label">Location</p>
+                <p class="info-card__text">თბილისი, წინანდლის ქუჩა 9</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#0066cc"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                  />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <p class="info-card__label">Phone</p>
+                <p class="info-card__text">234 44 62, 599 361187</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#0066cc"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div class="info-card__content">
+                <p class="info-card__label">Email</p>
+                <p class="info-card__text">zurab.marshania@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__map-container">
+            <iframe
+              class="contact__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.3020960213275!2d44.82704154910914!3d41.69060731193661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440c54f688c817%3A0xa742f4bc0e7f44!2s9%20Tsinandali%20Street%2C%20T'bilisi%200144!5e0!3m2!1sen!2sge!4v1718032118354!5m2!1sen!2sge"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <!-- Footer Logo და Description -->
+          <div class="footer__brand">
+            <div class="brand-info">
+              <img
+                class="brand-info__logo"
+                src="img/Prof. Zurab Marshania (3).png"
+                alt="Professional Therapy Logo"
+              />
+              <p class="brand-info__description">
+                სამედიცინო სექსოლოგია თანამედროვე მედიცინის ინტერდისციპლინარული დარგია, რომლის
+                შესწავლის საგანია ადამიანის სექსუალური ჯანმრთელობა..
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact ინფორმაცია -->
+          <div class="footer__contact">
+            <h3 class="footer__heading">კონტაქტი</h3>
+            <address class="contact-info">
+              <p class="contact-info__item contact-info__item--address">
+                ქ.თბილისის, წინანდლის ქუჩა 9 (კლინიკა "ენმედიცი" - არამიანცის საავადმყოფოს
+                ტერიტორია).
+              </p>
+              <p class="contact-info__item contact-info__item--email">zurab.marshania@gmail.com</p>
+              <p class="contact-info__item contact-info__item--phone">234 44 62, 599 361187</p>
+            </address>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer__quick-links">
+            <h3 class="footer__heading">ბმულები</h3>
+            <nav class="quick-links">
+              <ul class="quick-links__list">
+                <li class="quick-links__item">
+                  <a href="/" class="quick-links__link">მთავარი</a>
+                </li>
+                <li class="quick-links__item">
+                  <a href="/services" class="quick-links__link">ბიოგრაფია</a>
+                </li>
+                <li class="quick-links__item">
+                  <a href="/appointment" class="quick-links__link">კონტაქტი</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

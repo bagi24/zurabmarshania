@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,6 @@
   },
   "homepage": "https://github.com/bagi24/zurabmarshania#readme",
   "devDependencies": {
-    "del": "^6.1.1",
-    "gulp": "^5.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
+    "serve-static": "^2.2.0"
   }
 }
