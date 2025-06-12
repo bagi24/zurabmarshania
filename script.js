@@ -85,9 +85,221 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const selected = document.querySelector('.language-switcher__selected');
+const dropdown = document.querySelector('.language-switcher__dropdown');
+
+selected.addEventListener('click', () => {
+  dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Dropdown ავტომატურად დაიხუროს სხვა ადგილას დაკლიკებისას
+document.addEventListener('click', e => {
+  if (!document.querySelector('.header__language-switcher').contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
 window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('gender-loader');
     loader.style.display = 'none';
-  }, 3000);
+  }, 0);
+});
+
+// ყველა ბმულის არჩევა
+const navLinks = document.querySelectorAll('.nav-list__link');
+
+// თითოეულ ბმულზე click-ის დაკვირვება
+navLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    // წავშალოთ active კლასი ყველა ბმულიდან
+    navLinks.forEach(link => link.classList.remove('nav-list__link--active'));
+
+    // დავამატოთ active კლასი იმ ბმულს, რომელზეც დააწკაპუნეს
+    this.classList.add('nav-list__link--active');
+  });
+});
+
+document.querySelector('.header__logo').addEventListener('click', function () {
+  location.reload();
+});
+
+const selectedFlagImg = document.querySelector('.language-switcher__selected img');
+const dropdownMenu = document.querySelector('.language-switcher__dropdown');
+const languageOptions = document.querySelectorAll('.language-switcher__item img');
+const selectedWrapper = document.querySelector('.language-switcher__selected');
+const languageSwitcherContainer = document.querySelector('.header__language-switcher');
+
+// თარგმანის მონაცემები (მაგალითად)
+const translations = {
+  ge: {
+    main: 'მთავარი',
+    bio: 'ბიოგრაფია',
+    articles: 'სტატიები',
+    books: 'წიგნები',
+    contact: 'კონტაქტი',
+    hero_title: 'ზურაბ მარშანია',
+    hero_subtitle: 'პროფესორი',
+    hero_button: 'დეტალურად',
+    call_text: 'ვიზიტის ჯავშნისთვის დაგვიკავშირდით',
+    books_promo_title: 'ავტორის გამოცემა',
+    bestseller_badge: 'ბესტსელერი',
+    new_badge: 'ახალი',
+    book1_title: 'სექსუალური ჯანმრთელობის საფუძვლები',
+    book1_author: 'ზურაბ მარშანია',
+    book1_description:
+      'წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.',
+    buy_button: 'ყიდვა',
+    book2_title: 'პარტნიორობის ფსიქოლოგია',
+    book2_author: 'ზურაბ მარშანია',
+    book2_description: 'თანამედროვე ურთიერთობების ფსიქოლოგიური ასპექტების გაშიფვრა.',
+    bio_title: 'ბიოგრაფია',
+    bio_subtitle:
+      'ზურაბ მარშანია - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი და სამეცნიერო საბჭოს თავმჯდომარე პროფესორი',
+    bio_text:
+      'ექიმი სექსოლოგი, საქართველოს ეროვნული უნივერსიტეტის (სეუ) ფსიქოლოგიის ფაკულტეტის ასოცირებული პროფესორი...',
+    articles_title: 'სტატიები',
+    article1_title: 'სექსუალური განათლების მნიშვნელობა',
+    article1_excerpt:
+      'როგორ ვასწავლოთ ახალგაზრდებს სექსუალობა სწორად და კულტურულად – პროფესორის მოსაზრება.',
+    article1_link: 'სრულად წაკითხვა',
+    article2_title: 'გენდერული იდენტობის ფსიქოლოგია',
+    article2_excerpt:
+      'როგორ ყალიბდება გენდერული იდენტობა და რა როლი აქვს გარემოს ფსიქოლოგიურ განვითარებაში.',
+    article2_link: 'სრულად წაკითხვა',
+    contact_title: 'კონტაქტი',
+    contact_location_label: 'მისამართი',
+    contact_location_text: 'თბილისი, წინანდლის ქუჩა 9',
+    contact_phone_label: 'ტელეფონი',
+    contact_phone_text: '+995 599 12 34 56',
+    contact_call_text: 'ვიზიტის ჯავშნისთვის დაგვიკავშირდით',
+  },
+  en: {
+    main: 'Main',
+    bio: 'Biography',
+    articles: 'Articles',
+    books: 'Books',
+    contact: 'Contact',
+    hero_title: 'Zurab Marshania',
+    hero_subtitle: 'Professor',
+    hero_button: 'Details',
+    call_text: 'Contact us to book a visit',
+    books_promo_title: "Author's Publication",
+    bestseller_badge: 'Bestseller',
+    new_badge: 'New',
+    book1_title: 'Fundamentals of Sexual Health',
+    book1_author: 'Zurab Marshania',
+    book1_description: 'A book that comprehensively covers issues of human sexual health.',
+    buy_button: 'Buy',
+    book2_title: 'Psychology of Partnership',
+    book2_author: 'Zurab Marshania',
+    book2_description: 'Decoding psychological aspects of modern relationships.',
+    bio_title: 'Biography',
+    bio_subtitle:
+      'Zurab Marshania - President of the Georgian Medical Sexology Society and Chairman of the Scientific Council, Professor',
+    bio_text:
+      'Sexologist doctor, Associate Professor at the Psychology Faculty of the Georgian National University (SEU)...',
+    articles_title: 'Articles',
+    article1_title: 'The Importance of Sexual Education',
+    article1_excerpt:
+      "How to teach youth sexuality correctly and culturally – professor's opinion.",
+    article1_link: 'Read more',
+    article2_title: 'Psychology of Gender Identity',
+    article2_excerpt:
+      'How gender identity forms and the role of environment in psychological development.',
+    article2_link: 'Read more',
+    contact_title: 'Contact',
+    contact_location_label: 'Location',
+    contact_location_text: 'Tbilisi, 9 Tsinandali Street',
+    contact_phone_label: 'Phone',
+    contact_phone_text: '+995 599 12 34 56',
+    contact_call_text: 'Contact us to book a visit',
+  },
+  ru: {
+    main: 'Главная',
+    bio: 'Биография',
+    articles: 'Статьи',
+    books: 'Книги',
+    contact: 'Контакт',
+    hero_title: 'Зураб Маршания',
+    hero_subtitle: 'Профессор',
+    hero_button: 'Подробнее',
+    call_text: 'Свяжитесь с нами для записи на прием',
+    books_promo_title: 'Издание автора',
+    bestseller_badge: 'Бестселлер',
+    new_badge: 'Новый',
+    book1_title: 'Основы сексуального здоровья',
+    book1_author: 'Зураб Маршания',
+    book1_description:
+      'Книга, которая всесторонне освещает вопросы сексуального здоровья человека.',
+    buy_button: 'Купить',
+    book2_title: 'Психология партнерства',
+    book2_author: 'Зураб Маршания',
+    book2_description: 'Расшифровка психологических аспектов современных отношений.',
+    bio_title: 'Биография',
+    bio_subtitle:
+      'Зураб Маршания - Президент Грузинского общества медицинской сексологии и председатель научного совета, профессор',
+    bio_text:
+      'Доктор-сексолог, доцент факультета психологии Национального университета Грузии (СЕУ)...',
+    articles_title: 'Статьи',
+    article1_title: 'Значение сексуального образования',
+    article1_excerpt:
+      'Как правильно и культурно обучать молодежь сексуальности — мнение профессора.',
+    article1_link: 'Читать полностью',
+    article2_title: 'Психология гендерной идентичности',
+    article2_excerpt:
+      'Как формируется гендерная идентичность и роль окружения в психологическом развитии.',
+    article2_link: 'Читать полностью',
+    contact_title: 'Контакт',
+    contact_location_label: 'Местоположение',
+    contact_location_text: 'Тбилиси, улица Цинандали 9',
+    contact_phone_label: 'Телефон',
+    contact_phone_text: '+995 599 12 34 56',
+    contact_call_text: 'Свяжитесь с нами для записи на прием',
+  },
+};
+
+// ენის განახლების ფუნქცია
+function updateTexts(lang) {
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+// თავდაპირველი ენა
+let currentLanguage = 'ge';
+updateTexts(currentLanguage);
+
+// Dropdown-ის გამოჩენა/დამალვა
+selectedWrapper.addEventListener('click', e => {
+  e.stopPropagation(); // არ გადავიდეს document-ზე
+  dropdownMenu.classList.toggle('show');
+});
+
+// გარეთ დაკლიკებისას dropdown-ის დახურვა
+document.addEventListener('click', event => {
+  if (!languageSwitcherContainer.contains(event.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+// ენის შეცვლა dropdown-დან
+languageOptions.forEach(option => {
+  option.addEventListener('click', e => {
+    e.stopPropagation(); // თავიდან ავიცილოთ document-ის event
+    const selectedLang = option.getAttribute('data-language');
+
+    if (selectedLang && translations[selectedLang]) {
+      selectedFlagImg.src = option.src;
+      selectedFlagImg.alt = option.alt;
+
+      currentLanguage = selectedLang;
+      updateTexts(currentLanguage);
+
+      dropdownMenu.classList.remove('show');
+    }
+  });
 });

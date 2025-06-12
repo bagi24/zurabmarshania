@@ -19,44 +19,46 @@
         <nav class="header__nav">
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--active" href="#main-section" data-link
+              <a
+                class="nav-list__link nav-list__link--active"
+                href="#main-section"
+                data-link
+                data-i18n="main"
                 >მთავარი</a
               >
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#bio-section" data-link>ბიოგრაფია</a>
+              <a class="nav-list__link" href="#bio-section" data-link data-i18n="bio">ბიოგრაფია</a>
             </li>
-
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#contact-section" data-link>კონტაქტი</a>
+              <a class="nav-list__link" href="#articles-section" data-link data-i18n="articles"
+                >სტატიები</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#book-section" data-link data-i18n="books">წიგნები</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#contact-section" data-link data-i18n="contact"
+                >კონტაქტი</a
+              >
             </li>
           </ul>
         </nav>
         <div class="header__language-switcher">
-          <span class="language-switcher__item language-switcher__item--active">GE</span>
-          <span class="language-switcher__item">EN</span>
-          <span class="language-switcher__item">RU</span>
-        </div>
-
-        <div class="call-box">
-          <div class="call-icon">
-            <div class="info-card__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="#0066cc"
-                width="24px"
-                height="24px"
-              >
-                <path
-                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-                />
-              </svg>
-            </div>
+          <div class="language-switcher__selected">
+            <img src="img/Flag_of_Georgia.svg.png" alt="GE" />
           </div>
-          <div class="call-info">
-            <div class="phone-number">+995 599 12 34 56</div>
-            <div class="call-text">დარეკეთ ნებისმიერ დროს</div>
+          <div class="language-switcher__dropdown">
+            <div class="language-switcher__item">
+              <img src="img/Flag_of_Georgia.svg.png" alt="GE" data-language="ge" />
+            </div>
+            <div class="language-switcher__item">
+              <img src="img/english-l1200.jpg" alt="EN" data-language="en" />
+            </div>
+            <div class="language-switcher__item">
+              <img src="img/ru.png" alt="RU" data-language="ru" />
+            </div>
           </div>
         </div>
       </div>
@@ -66,34 +68,109 @@
       <div class="main__container" id="main-section">
         <div class="inSpace">
           <div class="hero">
-            <h1 class="hero__title">ზურაბ მარშანია</h1>
-            <p class="hero__subtitle">
+            <h1 class="hero__title" data-i18n="hero_title">ზურაბ მარშანია</h1>
+            <p class="hero__subtitle" data-i18n="hero__subtitle">
               პროფესორი,
               <!-- <span class="animated-text" id="typing-text"></span> -->
               <span class="animated-text" id="typing-text"></span><span class="cursor"></span>
             </p>
 
-            <button class="hero__button">დეტალურად</button>
+            <a class="hero__button" href="#bio-section" data-link data-i18n="hero__button"
+              >დეტალურად</a
+            >
           </div>
 
           <img class="hero__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პროფილი" />
+          <div class="call-box">
+            <div class="call-icon">
+              <div class="info-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#0066cc"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="call-info">
+              <div class="phone-number">+995 599 12 34 56</div>
+              <div class="call-text" data-i18n="call-text">ვიზიტის ჯავშნისთვის დაგვიკავშირდით</div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- წიგნების რეკლამა - დაამატეთ main__container-ში hero-ს ქვემოთ -->
+      <section class="books-promo" id="book-section">
+        <h2 class="books-promo__title" data-i18n="books-promo__title">ავტორის გამოცემა</h2>
+        <div class="books-container">
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/sexologia.jpg" alt="წიგნის ყდა" class="book-image" />
+              <div class="book-badge" data-i18n=" bestseller_badge">ბესტსელერი</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title" data-i18n="book1_title">სექსუალური ჯანმრთელობის საფუძვლები</h3>
+              <p class="book-author" data-i18n=" book1_author">ზურაბ მარშანია</p>
+              <p class="book-description" data-i18n="book1_description">
+                წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.
+              </p>
+              <div class="book-actions">
+                <a
+                  href="http://laterna.ge/?cat=79&show=14032"
+                  class="buy-button"
+                  data-i18n="buy_button"
+                >
+                  ყიდვა
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/sexual.jpg" alt="წიგნის ყდა" class="book-image" />
+              <div class="book-badge book-badge--new" data-i18n="new_badge">ახალი</div>
+            </div>
+            <div class="book-info">
+              <h3 class="book-title" data-i18n=" book2_title">პარტნიორობის ფსიქოლოგია</h3>
+              <p class="book-author" data-i18n="book1_author">ზურაბ მარშანია</p>
+              <p class="book-description" data-i18n="book2_description">
+                თანამედროვე ურთიერთობების ფსიქოლოგიური ასპექტების გაშიფვრა.
+              </p>
+              <div class="book-actions">
+                <a
+                  href="http://laterna.ge/?cat=358&show=36213&lang=geo"
+                  class="buy-button"
+                  data-i18n=" buy_button"
+                >
+                  ყიდვა
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="bio" id="bio-section">
         <div class="bio__container">
           <img class="bio__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პორტრეტი" />
 
           <div class="bio__content">
-            <h1 class="bio__title">ბიოგრაფია</h1>
+            <h1 class="bio__title" data-i18n="bio_title">მოკლე ბიოგრაფია</h1>
 
-            <h5 class="bio__subtitle">
+            <h5 class="bio__subtitle" data-i18n="bio_subtitle">
               ზურაბ მარშანია - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი და
               სამეცნიერო საბჭოს თავმჯდომარე პროფესორი
             </h5>
 
             <div class="bio__text">
-              <p class="bio__paragraph">
+              <p class="bio__paragraph" data-i18n="bio_text">
                 ექიმი სექსოლოგი, საქართველოს ეროვნული უნივერსიტეტის (სეუ) ფსიქოლოგიის ფაკულტეტის
                 ასოცირებული პროფესორი, მედიცინის აკადემიური დოქტორი, ვ.ივერიელის სახ.
                 ენდოკრინოლოგია, მეტაბოლოგია, დიეტოლოგიის ცენტრი „ენმედიცი“-ს სექსოლოგიური სამსახურის
@@ -105,9 +182,53 @@
         </div>
       </div>
 
+      <section class="articles" id="articles-section">
+        <div class="articles__container">
+          <h2 class="articles__title" data-i18n="articles_title">სტატიები</h2>
+
+          <div class="articles__list">
+            <article class="article-card">
+              <img
+                src="img/sex-problem-couple-1680684189-1700114016.jpg"
+                alt="სტატიის სურათი"
+                class="article-card__image"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title" data-i18n=" article1_title">
+                  სექსუალური განათლების მნიშვნელობა
+                </h3>
+                <p class="article-card__excerpt" data-i18n="article1_excerpt">
+                  როგორ ვასწავლოთ ახალგაზრდებს სექსუალობა სწორად და კულტურულად – პროფესორის
+                  მოსაზრება.
+                </p>
+                <a href="#" class="article-card__link" data-i18n="article1_link">სრულად წაკითხვა</a>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <img
+                src="img/sqesobrivi-ganatleba_w_h.jpeg"
+                alt="სტატიის სურათი"
+                class="article-card__image"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title" data-i18n="article2_title">
+                  გენდერული იდენტობის ფსიქოლოგია
+                </h3>
+                <p class="article-card__excerpt" data-i18n="article2_excerpt">
+                  როგორ ყალიბდება გენდერული იდენტობა და რა როლი აქვს გარემოს ფსიქოლოგიურ
+                  განვითარებაში.
+                </p>
+                <a href="#" class="article-card__link" data-i18n="article2_link">სრულად წაკითხვა</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="contact" id="contact-section">
         <div class="contact__container">
-          <h1 class="contact__title">კონტაქტი</h1>
+          <h1 class="contact__title" data-i18n="contact_title">კონტაქტი</h1>
 
           <div class="contact__info">
             <div class="info-card">
@@ -125,8 +246,10 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label">Location</p>
-                <p class="info-card__text">თბილისი, წინანდლის ქუჩა 9</p>
+                <p class="info-card__label" data-i18n="contact_location_label">მისამართი</p>
+                <p class="info-card__text" data-i18n="  contact_location_text">
+                  თბილისი, წინანდლის ქუჩა 9
+                </p>
               </div>
             </div>
 
@@ -145,7 +268,7 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label">Phone</p>
+                <p class="info-card__label" data-i18n="contact_phone_label">ტელეფონი</p>
                 <p class="info-card__text">234 44 62, 599 361187</p>
               </div>
             </div>
@@ -233,6 +356,34 @@
               </ul>
             </nav>
           </div>
+          <section class="social-section">
+            <div class="social-icons">
+              <a
+                href="https://facebook.com"
+                class="social-icon"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="img/images.jpg" alt="Facebook" />
+              </a>
+              <a
+                href="https://instagram.com"
+                class="social-icon"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="img/instagram.jpg" alt="Instagram" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                class="social-icon"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <img src="img/linkdin.png" alt="LinkedIn" />
+              </a>
+            </div>
+          </section>
         </div>
         <div class="copyright-wrapper">
           <div class="copyright">Copyright © 2025 Widagdos. All Rights Reserved.</div>
