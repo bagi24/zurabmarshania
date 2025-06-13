@@ -119,8 +119,14 @@ navLinks.forEach(link => {
   });
 });
 
-document.querySelector('.header__logo').addEventListener('click', function () {
-  location.reload();
+document.querySelector('.header__logo').addEventListener('click', function (e) {
+  e.preventDefault();
+  const section = document.querySelector('#main-section');
+  if (section) {
+    const offset = section.offsetTop - 80;
+    smoothScrollTo(offset);
+    history.pushState(null, null, '#main-section');
+  }
 });
 
 const selectedFlagImg = document.querySelector('.language-switcher__selected img');
@@ -300,6 +306,18 @@ languageOptions.forEach(option => {
       updateTexts(currentLanguage);
 
       dropdownMenu.classList.remove('show');
+      dropdown.style.display = 'none';
     }
+  });
+});
+
+/*  burger Menu */
+document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.getElementById('burger');
+  const navList = document.getElementById('nav');
+
+  burger.addEventListener('click', function () {
+    navList.classList.toggle('active');
+    burger.classList.toggle('open');
   });
 });

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>My Gulp Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -15,9 +17,10 @@
     <header class="header">
       <div class="header__container">
         <img class="header__logo" src="img/Prof. Zurab Marshania (3).png" alt="logo" />
+        <button class="burger" id="burger"></button>
 
-        <nav class="header__nav">
-          <ul class="nav-list">
+        <nav class="header__nav" id="nav">
+          <ul class="nav-list" id="nav-list">
             <li class="nav-list__item">
               <a
                 class="nav-list__link nav-list__link--active"
