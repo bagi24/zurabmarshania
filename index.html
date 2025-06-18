@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://kit.fontawesome.com/015ae5e77e.js" crossorigin="anonymous"></script>
     <title>My Gulp Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -101,9 +101,20 @@
               </div>
             </div>
             <div class="call-info">
-              <div class="phone-number">+995 599 12 34 56</div>
+              <div class="phone-number">+995 599 641187</div>
               <div class="call-text" data-i18n="call-text">ვიზიტის ჯავშნისთვის დაგვიკავშირდით</div>
             </div>
+          </div>
+          <div class="media-icons">
+            <a href="https://www.facebook.com/zurab.marshania.5" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/zurab-marshania-2a441a336/" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -168,18 +179,31 @@
             <h1 class="bio__title" data-i18n="bio_title">მოკლე ბიოგრაფია</h1>
 
             <h5 class="bio__subtitle" data-i18n="bio_subtitle">
-              ზურაბ მარშანია - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი და
-              სამეცნიერო საბჭოს თავმჯდომარე პროფესორი
+              ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი
             </h5>
 
             <div class="bio__text">
               <p class="bio__paragraph" data-i18n="bio_text">
-                ექიმი სექსოლოგი, საქართველოს ეროვნული უნივერსიტეტის (სეუ) ფსიქოლოგიის ფაკულტეტის
-                ასოცირებული პროფესორი, მედიცინის აკადემიური დოქტორი, ვ.ივერიელის სახ.
-                ენდოკრინოლოგია, მეტაბოლოგია, დიეტოლოგიის ცენტრი „ენმედიცი“-ს სექსოლოგიური სამსახურის
-                ხელმძღვანელი, საქართველოს მამაკაცის ჯანმრთელობის ასოციაციის გენერალური მდივანი,
-                სოციალურ და პოლიტიკურ მეცნიერებათა დოქტორი, საგანგებო და სრულუფლებიანი დესპანი.
+                ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული
+                უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის
+                სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine)
+                აფილირებული ეროვნული საზოგადოების (National Associated Society) - საქართველოს
+                სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო
+                მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988
+                წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას
+                (პაციენტების ამბულატორიულ მიღებას) აგრძელებს "ზურაბ მარშანიას სამედიცინო სექსოლოგიის
+                კაბინეტში"; (წინასწარი ჩაწერა ტელეფონზე 599 641187 აუცილებელია) ორშაბათიდან
+                პარასკევის ჩათვლით 10 საათიდან 15 საათამდე, მისამართზე, ქ.თბილისი, თევდორე მღვდლის
+                ქ. 48, კორპუსი Iა, ბინა 2. ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში,
+                პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა
+                მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო
+                კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო
+                ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში.
+                ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და
+                სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა
+                საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.
               </p>
+              <button class="bio__toggle-btn" onclick="toggleBio()">სრულად ნახვა</button>
             </div>
           </div>
         </div>
@@ -251,7 +275,7 @@
               <div class="info-card__content">
                 <p class="info-card__label" data-i18n="contact_location_label">მისამართი</p>
                 <p class="info-card__text" data-i18n="  contact_location_text">
-                  თბილისი, წინანდლის ქუჩა 9
+                  თევდორე მღვდლის ქუჩა 48
                 </p>
               </div>
             </div>
@@ -272,7 +296,7 @@
               </div>
               <div class="info-card__content">
                 <p class="info-card__label" data-i18n="contact_phone_label">ტელეფონი</p>
-                <p class="info-card__text">234 44 62, 599 361187</p>
+                <p class="info-card__text">2 527884, 599 361187</p>
               </div>
             </div>
 
@@ -291,7 +315,7 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label">Email</p>
+                <p class="info-card__label">ელ.ფოსტა</p>
                 <p class="info-card__text">zurab.marshania@gmail.com</p>
               </div>
             </div>
@@ -299,10 +323,9 @@
 
           <div class="contact__map-container">
             <iframe
-              class="contact__map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.3020960213275!2d44.82704154910914!3d41.69060731193661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440c54f688c817%3A0xa742f4bc0e7f44!2s9%20Tsinandali%20Street%2C%20T'bilisi%200144!5e0!3m2!1sen!2sge!4v1718032118354!5m2!1sen!2sge"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d372.1880533220606!2d44.7887187!3d41.7312115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473a225052451%3A0x1e882a4a238b235f!2z4YOo4YOe4YOhICLhg57hg6Dhg53hg6Thg5Thg6Hhg53hg6Dhg5gg4YOW4YOj4YOg4YOQ4YORIOGDm-GDkOGDoOGDqOGDkOGDnOGDmOGDkCAvIFByb2Zlc3NvciBadXJhYiBNYXJzaGFuaWE!5e0!3m2!1sen!2sge!4v1750277338228!5m2!1sen!2sge"
               width="100%"
-              height="400"
+              height="450"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -311,6 +334,21 @@
           </div>
         </div>
       </section>
+
+      <div class="work__clock" id="work-clock">
+        <div class="work__clock-state" onclick="showClockDetails()">
+          <i class="fa-solid fa-clock"></i>
+          <p>სამუშაო საათები</p>
+        </div>
+        <div class="work__clock-display" id="clockDisplay">
+          <i class="fa-solid fa-xmark" onclick="hideClockDetails()"></i>
+          <p lang="ka">
+            მოგესალმებით, მადლობა რომ დაგვიკავშირდით, შეგახსენებთ: პაციენტების მიღება (წინასწარი
+            ჩაწერა ტელეფონით 599 641187 - აუცილებელია). ორშაბათიდან პარასკევის ჩათვლით 10:00-15:00.
+            მისამართზე: თევდორე მღვდლის ქუჩა 48, კორპუსი 1ა, ბინა 2
+          </p>
+        </div>
+      </div>
 
       <footer class="footer">
         <div class="footer__container">
@@ -333,12 +371,23 @@
           <div class="footer__contact">
             <h3 class="footer__heading">კონტაქტი</h3>
             <address class="contact-info">
-              <p class="contact-info__item contact-info__item--address">
-                ქ.თბილისის, წინანდლის ქუჩა 9 (კლინიკა "ენმედიცი" - არამიანცის საავადმყოფოს
-                ტერიტორია).
-              </p>
-              <p class="contact-info__item contact-info__item--email">zurab.marshania@gmail.com</p>
-              <p class="contact-info__item contact-info__item--phone">234 44 62, 599 361187</p>
+              <div class="aswame_icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="contact-info__item contact-info__item--address">
+                  თევდორე მღვდლის ქუჩა 48,<br />
+                  კორპუსი 1ა, ბინა 2
+                </p>
+              </div>
+              <div class="aswame_icon">
+                <i class="fa-regular fa-envelope"></i>
+                <p class="contact-info__item contact-info__item--email">
+                  zurab.marshania@gmail.com
+                </p>
+              </div>
+              <div class="aswame_icon">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p class="contact-info__item contact-info__item--phone">2 527884, 599 361187</p>
+              </div>
             </address>
           </div>
 
@@ -348,45 +397,17 @@
             <nav class="quick-links">
               <ul class="quick-links__list">
                 <li class="quick-links__item">
-                  <a href="/" class="quick-links__link">მთავარი</a>
+                  <a href="#main-section" class="quick-links__link">მთავარი</a>
                 </li>
                 <li class="quick-links__item">
-                  <a href="/services" class="quick-links__link">ბიოგრაფია</a>
+                  <a href="#bio-section" class="quick-links__link">ბიოგრაფია</a>
                 </li>
                 <li class="quick-links__item">
-                  <a href="/appointment" class="quick-links__link">კონტაქტი</a>
+                  <a href="#contact-section" class="quick-links__link">კონტაქტი</a>
                 </li>
               </ul>
             </nav>
           </div>
-          <section class="social-section">
-            <div class="social-icons">
-              <a
-                href="https://facebook.com"
-                class="social-icon"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <img src="img/images.jpg" alt="Facebook" />
-              </a>
-              <a
-                href="https://instagram.com"
-                class="social-icon"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <img src="img/instagram.jpg" alt="Instagram" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                class="social-icon"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <img src="img/linkdin.png" alt="LinkedIn" />
-              </a>
-            </div>
-          </section>
         </div>
         <div class="copyright-wrapper">
           <div class="copyright">Copyright © 2025 Widagdos. All Rights Reserved.</div>
