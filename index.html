@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/015ae5e77e.js" crossorigin="anonymous"></script>
-    <title>My Gulp Website</title>
+    <script src="https://unpkg.com/i18next@23.6.17/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+    <title>Doctor Zurab Marshania</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,7 +20,7 @@
       <div class="header__container">
         <img class="header__logo" src="img/Prof. Zurab Marshania (3).png" alt="logo" />
         <button class="burger" id="burger"></button>
-
+        <div class="city-phone"><i class="fa-solid fa-phone"></i> 032 2 527884 | 599 361187</div>
         <nav class="header__nav" id="nav">
           <ul class="nav-list" id="nav-list">
             <li class="nav-list__item">
@@ -122,14 +124,17 @@
       <!-- წიგნების რეკლამა - დაამატეთ main__container-ში hero-ს ქვემოთ -->
       <section class="books-promo" id="book-section">
         <h2 class="books-promo__title" data-i18n="books-promo__title">ავტორის გამოცემა</h2>
-        <div class="books-container">
+        <div class="books-container fade-slide-up">
           <div class="book-card">
             <div class="book-cover">
-              <img src="img/sexologia.jpg" alt="წიგნის ყდა" class="book-image" />
+              <img src="img/book-2.jpeg" alt="წიგნის ყდა" class="book-image" />
+              <img src="img/book-21.jpeg" alt="წიგნის ყდა" class="book-image" />
               <div class="book-badge" data-i18n=" bestseller_badge">ბესტსელერი</div>
             </div>
             <div class="book-info">
-              <h3 class="book-title" data-i18n="book1_title">სექსუალური ჯანმრთელობის საფუძვლები</h3>
+              <h3 class="book-title" data-i18n="book1_title">
+                სამედიცინო სექსოლოგიისა და ფსიქო სექსოლოგიის საფუძვლები
+              </h3>
               <p class="book-author" data-i18n=" book1_author">ზურაბ მარშანია</p>
               <p class="book-description" data-i18n="book1_description">
                 წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.
@@ -148,14 +153,18 @@
 
           <div class="book-card">
             <div class="book-cover">
-              <img src="img/sexual.jpg" alt="წიგნის ყდა" class="book-image" />
+              <img src="img/book-1.jpeg" alt="წიგნის ყდა" class="book-image" />
+              <img src="img/book-12.jpeg" alt="წიგნის ყდა" class="book-image" />
               <div class="book-badge book-badge--new" data-i18n="new_badge">ახალი</div>
             </div>
             <div class="book-info">
-              <h3 class="book-title" data-i18n=" book2_title">პარტნიორობის ფსიქოლოგია</h3>
+              <h3 class="book-title" data-i18n=" book2_title">
+                Sexual Medicine from the point of view of a clinician-sexologist
+              </h3>
               <p class="book-author" data-i18n="book1_author">ზურაბ მარშანია</p>
               <p class="book-description" data-i18n="book2_description">
-                თანამედროვე ურთიერთობების ფსიქოლოგიური ასპექტების გაშიფვრა.
+                The book provides unique, comprehensive basic knowledge of clinical sexology, which
+                is absolutely necessary for both medical students and doctors of various specialties
               </p>
               <div class="book-actions">
                 <a
@@ -171,7 +180,7 @@
         </div>
       </section>
 
-      <div class="bio" id="bio-section">
+      <div class="bio fade-slide-up" id="bio-section">
         <div class="bio__container">
           <img class="bio__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პორტრეტი" />
 
@@ -213,7 +222,7 @@
         <div class="articles__container">
           <h2 class="articles__title" data-i18n="articles_title">სტატიები</h2>
 
-          <div class="articles__list">
+          <div class="articles__list fade-slide-up">
             <article class="article-card">
               <img
                 src="img/sex-problem-couple-1680684189-1700114016.jpg"
@@ -255,9 +264,9 @@
 
       <section class="contact" id="contact-section">
         <div class="contact__container">
-          <h1 class="contact__title" data-i18n="contact_title">კონტაქტი</h1>
+          <h1 class="contact__title fade-slide-up" data-i18n="contact_title">კონტაქტი</h1>
 
-          <div class="contact__info">
+          <div class="contact__info fade-slide-up">
             <div class="info-card">
               <div class="info-card__icon">
                 <svg
@@ -321,7 +330,7 @@
             </div>
           </div>
 
-          <div class="contact__map-container">
+          <div class="contact__map-container fade-slide-up">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d372.1880533220606!2d44.7887187!3d41.7312115!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473a225052451%3A0x1e882a4a238b235f!2z4YOo4YOe4YOhICLhg57hg6Dhg53hg6Thg5Thg6Hhg53hg6Dhg5gg4YOW4YOj4YOg4YOQ4YORIOGDm-GDkOGDoOGDqOGDkOGDnOGDmOGDkCAvIFByb2Zlc3NvciBadXJhYiBNYXJzaGFuaWE!5e0!3m2!1sen!2sge!4v1750277338228!5m2!1sen!2sge"
               width="100%"
@@ -350,7 +359,7 @@
         </div>
       </div>
 
-      <footer class="footer">
+      <footer class="footer fade-slide-up">
         <div class="footer__container">
           <!-- Footer Logo და Description -->
           <div class="footer__brand">

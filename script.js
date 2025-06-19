@@ -135,141 +135,19 @@ const languageOptions = document.querySelectorAll('.language-switcher__item img'
 const selectedWrapper = document.querySelector('.language-switcher__selected');
 const languageSwitcherContainer = document.querySelector('.header__language-switcher');
 
-// თარგმანის მონაცემები (მაგალითად)
-const translations = {
-  ge: {
-    main: 'მთავარი',
-    bio: 'ბიოგრაფია',
-    articles: 'სტატიები',
-    books: 'წიგნები',
-    contact: 'კონტაქტი',
-    hero_title: 'ზურაბ მარშანია',
-    hero_subtitle: 'პროფესორი',
-    hero_button: 'დეტალურად',
-    call_text: 'ვიზიტის ჯავშნისთვის დაგვიკავშირდით',
-    books_promo_title: 'ავტორის გამოცემა',
-    bestseller_badge: 'ბესტსელერი',
-    new_badge: 'ახალი',
-    book1_title: 'სექსუალური ჯანმრთელობის საფუძვლები',
-    book1_author: 'ზურაბ მარშანია',
-    book1_description:
-      'წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.',
-    buy_button: 'ყიდვა',
-    book2_title: 'პარტნიორობის ფსიქოლოგია',
-    book2_author: 'ზურაბ მარშანია',
-    book2_description: 'თანამედროვე ურთიერთობების ფსიქოლოგიური ასპექტების გაშიფვრა.',
-    bio_title: 'ბიოგრაფია',
-    bio_subtitle: ' ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი',
-    bio_text:
-      '   ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine) აფილირებული ეროვნული საზოგადოების (National Associated Society) - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988 წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას (პაციენტების ამბულატორიულ მიღებას) აგრძელებს "ზურაბ მარშანიას სამედიცინო სექსოლოგიის კაბინეტში"; (წინასწარი ჩაწერა ტელეფონზე 599 641187 აუცილებელია) ორშაბათიდან პარასკევის ჩათვლით 10 საათიდან 15 საათამდე, მისამართზე, ქ.თბილისი, თევდორე მღვდლის ქ. 48, კორპუსი Iა, ბინა 2. ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში, პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში. ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.',
-    articles_title: 'სტატიები',
-    article1_title: 'სექსუალური განათლების მნიშვნელობა',
-    article1_excerpt:
-      'როგორ ვასწავლოთ ახალგაზრდებს სექსუალობა სწორად და კულტურულად – პროფესორის მოსაზრება.',
-    article1_link: 'სრულად წაკითხვა',
-    article2_title: 'გენდერული იდენტობის ფსიქოლოგია',
-    article2_excerpt:
-      'როგორ ყალიბდება გენდერული იდენტობა და რა როლი აქვს გარემოს ფსიქოლოგიურ განვითარებაში.',
-    article2_link: 'სრულად წაკითხვა',
-    contact_title: 'კონტაქტი',
-    contact_location_label: 'მისამართი',
-    contact_location_text: 'თბილისი, წინანდლის ქუჩა 9',
-    contact_phone_label: 'ტელეფონი',
-    contact_phone_text: '+995 599 12 34 56',
-    contact_call_text: 'ვიზიტის ჯავშნისთვის დაგვიკავშირდით',
-  },
-  en: {
-    main: 'Main',
-    bio: 'Biography',
-    articles: 'Articles',
-    books: 'Books',
-    contact: 'Contact',
-    hero_title: 'Zurab Marshania',
-    hero_subtitle: 'Professor',
-    hero_button: 'Details',
-    call_text: 'Contact us to book a visit',
-    books_promo_title: "Author's Publication",
-    bestseller_badge: 'Bestseller',
-    new_badge: 'New',
-    book1_title: 'Fundamentals of Sexual Health',
-    book1_author: 'Zurab Marshania',
-    book1_description: 'A book that comprehensively covers issues of human sexual health.',
-    buy_button: 'Buy',
-    book2_title: 'Psychology of Partnership',
-    book2_author: 'Zurab Marshania',
-    book2_description: 'Decoding psychological aspects of modern relationships.',
-    bio_title: 'Biography',
-    bio_subtitle:
-      'Zurab Marshania - President of the Georgian Medical Sexology Society and Chairman of the Scientific Council, Professor',
-    bio_text:
-      'Sexologist doctor, Associate Professor at the Psychology Faculty of the Georgian National University (SEU)...',
-    articles_title: 'Articles',
-    article1_title: 'The Importance of Sexual Education',
-    article1_excerpt:
-      "How to teach youth sexuality correctly and culturally – professor's opinion.",
-    article1_link: 'Read more',
-    article2_title: 'Psychology of Gender Identity',
-    article2_excerpt:
-      'How gender identity forms and the role of environment in psychological development.',
-    article2_link: 'Read more',
-    contact_title: 'Contact',
-    contact_location_label: 'Location',
-    contact_location_text: 'Tbilisi, 9 Tsinandali Street',
-    contact_phone_label: 'Phone',
-    contact_phone_text: '+995 599 12 34 56',
-    contact_call_text: 'Contact us to book a visit',
-  },
-  ru: {
-    main: 'Главная',
-    bio: 'Биография',
-    articles: 'Статьи',
-    books: 'Книги',
-    contact: 'Контакт',
-    hero_title: 'Зураб Маршания',
-    hero_subtitle: 'Профессор',
-    hero_button: 'Подробнее',
-    call_text: 'Свяжитесь с нами для записи на прием',
-    books_promo_title: 'Издание автора',
-    bestseller_badge: 'Бестселлер',
-    new_badge: 'Новый',
-    book1_title: 'Основы сексуального здоровья',
-    book1_author: 'Зураб Маршания',
-    book1_description:
-      'Книга, которая всесторонне освещает вопросы сексуального здоровья человека.',
-    buy_button: 'Купить',
-    book2_title: 'Психология партнерства',
-    book2_author: 'Зураб Маршания',
-    book2_description: 'Расшифровка психологических аспектов современных отношений.',
-    bio_title: 'Биография',
-    bio_subtitle:
-      'Зураб Маршания - Президент Грузинского общества медицинской сексологии и председатель научного совета, профессор',
-    bio_text:
-      'Доктор-сексолог, доцент факультета психологии Национального университета Грузии (СЕУ)...',
-    articles_title: 'Статьи',
-    article1_title: 'Значение сексуального образования',
-    article1_excerpt:
-      'Как правильно и культурно обучать молодежь сексуальности — мнение профессора.',
-    article1_link: 'Читать полностью',
-    article2_title: 'Психология гендерной идентичности',
-    article2_excerpt:
-      'Как формируется гендерная идентичность и роль окружения в психологическом развитии.',
-    article2_link: 'Читать полностью',
-    contact_title: 'Контакт',
-    contact_location_label: 'Местоположение',
-    contact_location_text: 'Тбилиси, улица Цинандали 9',
-    contact_phone_label: 'Телефон',
-    contact_phone_text: '+995 599 12 34 56',
-    contact_call_text: 'Свяжитесь с нами для записи на прием',
-  },
-};
+//ენის შეცვლა
 
-// ენის განახლების ფუნქცია
-function updateTexts(lang) {
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+// თარგმანის მონაცემები (მაგალითად)
+
+async function updateTexts(lang) {
+  const res = await fetch('./translate.json');
+  const allTranslations = await res.json();
+  const translations = allTranslations[lang]; // აი აქ! მხოლოდ ერთი ენა
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations && translations[key]) {
+      el.textContent = translations[key];
     }
   });
 }
@@ -294,15 +172,14 @@ document.addEventListener('click', event => {
 // ენის შეცვლა dropdown-დან
 languageOptions.forEach(option => {
   option.addEventListener('click', e => {
-    e.stopPropagation(); // თავიდან ავიცილოთ document-ის event
+    e.stopPropagation();
     const selectedLang = option.getAttribute('data-language');
 
-    if (selectedLang && translations[selectedLang]) {
+    if (selectedLang) {
       selectedFlagImg.src = option.src;
       selectedFlagImg.alt = option.alt;
 
-      currentLanguage = selectedLang;
-      updateTexts(currentLanguage);
+      changeLanguage(selectedLang);
 
       dropdownMenu.classList.remove('show');
       dropdown.style.display = 'none';
@@ -334,4 +211,45 @@ function toggleBio() {
   const button = document.querySelector('.bio__toggle-btn');
   const isExpanded = bioText.classList.toggle('expanded');
   button.textContent = isExpanded ? 'შეკუმშვა' : 'სრულად ნახვა';
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+const fadeElements = document.querySelectorAll('.fade-slide-up');
+fadeElements.forEach(el => observer.observe(el));
+
+///ენის პარამეტრები
+
+i18next.use(i18nextHttpBackend).init(
+  {
+    lng: 'ge',
+    fallbackLng: 'ge',
+    debug: true,
+    backend: {
+      loadPath: './locales/{{lng}}/translation.json', // შენს სტრუქტურაზე ზუსტად ასე
+    },
+  },
+  function (err, t) {
+    if (err) return console.error(err);
+    updateContent();
+  }
+);
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = i18next.t(key);
+  });
+}
+
+function changeLanguage(lang) {
+  i18next.changeLanguage(lang, () => {
+    updateContent();
+  });
 }
