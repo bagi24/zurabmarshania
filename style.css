@@ -182,10 +182,10 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  z-index: 100;
+  z-index: 1000;
   min-width: 100%;
 }
-.language-switcher__dropdown.show {
+.language-switcher__dropdown.visible {
   display: block;
 }
 
@@ -342,14 +342,20 @@ body {
 .cursor {
   display: inline-block;
   width: 1px;
-  background-color: rgb(209, 26, 26);
+  /* background-color: rgb(209, 26, 26); */
   animation: blink 0.7s steps(2, start) infinite;
   margin-left: 2px;
+  user-select: none;
 }
 
 @keyframes blink {
-  to {
-    visibility: hidden;
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
   }
 }
 
@@ -359,7 +365,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: #880e4f;
+    border-color: #0c9aff;
   }
 }
 

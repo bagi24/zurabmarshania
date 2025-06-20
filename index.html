@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/015ae5e77e.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/i18next@23.6.17/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
     <title>Doctor Zurab Marshania</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -28,25 +26,23 @@
                 class="nav-list__link nav-list__link--active"
                 href="#main-section"
                 data-link
-                data-i18n="main"
+                id="main"
                 >მთავარი</a
               >
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#bio-section" data-link data-i18n="bio">ბიოგრაფია</a>
+              <a class="nav-list__link" href="#bio-section" data-link id="bio">ბიოგრაფია</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#articles-section" data-link data-i18n="articles"
+              <a class="nav-list__link" href="#articles-section" data-link id="articles"
                 >სტატიები</a
               >
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#book-section" data-link data-i18n="books">წიგნები</a>
+              <a class="nav-list__link" href="#book-section" data-link id="books">წიგნები</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#contact-section" data-link data-i18n="contact"
-                >კონტაქტი</a
-              >
+              <a class="nav-list__link" href="#contact-section" data-link id="contact">კონტაქტი</a>
             </li>
           </ul>
         </nav>
@@ -73,16 +69,14 @@
       <div class="main__container" id="main-section">
         <div class="inSpace">
           <div class="hero">
-            <h1 class="hero__title" data-i18n="hero_title">ზურაბ მარშანია</h1>
-            <p class="hero__subtitle" data-i18n="hero__subtitle">
-              პროფესორი,
-              <!-- <span class="animated-text" id="typing-text"></span> -->
-              <span class="animated-text" id="typing-text"></span><span class="cursor"></span>
+            <h1 class="hero__title" id="hero_title">ზურაბ მარშანია</h1>
+
+            <p class="hero__subtitle" id="hero__subtitle">
+              <span id="hero__subtitle_static">პროფესორი,</span>
+              <span class="animated-text" id="typing-text"></span><span class="cursor">__</span>
             </p>
 
-            <a class="hero__button" href="#bio-section" data-link data-i18n="hero__button"
-              >დეტალურად</a
-            >
+            <a class="hero__button" href="#bio-section" data-link id="hero__button">დეტალურად</a>
           </div>
 
           <img class="hero__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პროფილი" />
@@ -104,7 +98,7 @@
             </div>
             <div class="call-info">
               <div class="phone-number">+995 599 641187</div>
-              <div class="call-text" data-i18n="call-text">ვიზიტის ჯავშნისთვის დაგვიკავშირდით</div>
+              <div class="call-text" id="call_desc">ვიზიტის ჯავშნისთვის დაგვიკავშირდით</div>
             </div>
           </div>
           <div class="media-icons">
@@ -123,28 +117,24 @@
 
       <!-- წიგნების რეკლამა - დაამატეთ main__container-ში hero-ს ქვემოთ -->
       <section class="books-promo" id="book-section">
-        <h2 class="books-promo__title" data-i18n="books-promo__title">ავტორის გამოცემა</h2>
+        <h2 class="books-promo__title" id="books-promo__title">ავტორის გამოცემა</h2>
         <div class="books-container fade-slide-up">
           <div class="book-card">
             <div class="book-cover">
               <img src="img/book-2.jpeg" alt="წიგნის ყდა" class="book-image" />
               <img src="img/book-21.jpeg" alt="წიგნის ყდა" class="book-image" />
-              <div class="book-badge" data-i18n=" bestseller_badge">ბესტსელერი</div>
+              <div class="book-badge" id="bestseller_badge">ბესტსელერი</div>
             </div>
             <div class="book-info">
-              <h3 class="book-title" data-i18n="book1_title">
+              <h3 class="book-title" id="book1_title">
                 სამედიცინო სექსოლოგიისა და ფსიქო სექსოლოგიის საფუძვლები
               </h3>
-              <p class="book-author" data-i18n=" book1_author">ზურაბ მარშანია</p>
-              <p class="book-description" data-i18n="book1_description">
+              <p class="book-author" id="book1_author">ზურაბ მარშანია</p>
+              <p class="book-description" id="book1_description">
                 წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.
               </p>
               <div class="book-actions">
-                <a
-                  href="http://laterna.ge/?cat=79&show=14032"
-                  class="buy-button"
-                  data-i18n="buy_button"
-                >
+                <a href="http://laterna.ge/?cat=79&show=14032" class="buy-button" id="buy_button">
                   ყიდვა
                 </a>
               </div>
@@ -155,22 +145,24 @@
             <div class="book-cover">
               <img src="img/book-1.jpeg" alt="წიგნის ყდა" class="book-image" />
               <img src="img/book-12.jpeg" alt="წიგნის ყდა" class="book-image" />
-              <div class="book-badge book-badge--new" data-i18n="new_badge">ახალი</div>
+              <div class="book-badge book-badge--new" id="new_badge">ახალი</div>
             </div>
             <div class="book-info">
-              <h3 class="book-title" data-i18n=" book2_title">
+              <h3 class="book-title" id="book2_title">
                 Sexual Medicine from the point of view of a clinician-sexologist
               </h3>
-              <p class="book-author" data-i18n="book1_author">ზურაბ მარშანია</p>
-              <p class="book-description" data-i18n="book2_description">
+              <p class="book-author" id="book2_author">ზურაბ მარშანია</p>
+              <p class="book-description" id="book2_description">
                 The book provides unique, comprehensive basic knowledge of clinical sexology, which
                 is absolutely necessary for both medical students and doctors of various specialties
+                (first of all general practitioners, and also
+                gynecologists,urologists,endocrinologists, psychiatrists, neurologists, and others).
               </p>
               <div class="book-actions">
                 <a
                   href="http://laterna.ge/?cat=358&show=36213&lang=geo"
                   class="buy-button"
-                  data-i18n=" buy_button"
+                  id="buy_button2"
                 >
                   ყიდვა
                 </a>
@@ -185,14 +177,14 @@
           <img class="bio__image" src="img/ზურაბ-მარშანია-1.png" alt="ზურაბ მარშანიას პორტრეტი" />
 
           <div class="bio__content">
-            <h1 class="bio__title" data-i18n="bio_title">მოკლე ბიოგრაფია</h1>
+            <h1 class="bio__title" id="bio_title">მოკლე ბიოგრაფია</h1>
 
-            <h5 class="bio__subtitle" data-i18n="bio_subtitle">
+            <h5 class="bio__subtitle" id="bio_subtitle">
               ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი
             </h5>
 
             <div class="bio__text">
-              <p class="bio__paragraph" data-i18n="bio_text">
+              <p class="bio__paragraph" id="bio_text">
                 ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული
                 უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის
                 სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine)
@@ -212,7 +204,9 @@
                 სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა
                 საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.
               </p>
-              <button class="bio__toggle-btn" onclick="toggleBio()">სრულად ნახვა</button>
+              <button id="srulad" class="bio__toggle-btn" onclick="toggleBio() ">
+                სრულად ნახვა
+              </button>
             </div>
           </div>
         </div>
@@ -220,7 +214,7 @@
 
       <section class="articles" id="articles-section">
         <div class="articles__container">
-          <h2 class="articles__title" data-i18n="articles_title">სტატიები</h2>
+          <h2 class="articles__title" id="articles_title">სტატიები</h2>
 
           <div class="articles__list fade-slide-up">
             <article class="article-card">
@@ -230,14 +224,14 @@
                 class="article-card__image"
               />
               <div class="article-card__content">
-                <h3 class="article-card__title" data-i18n=" article1_title">
+                <h3 class="article-card__title" id="article1_title">
                   სექსუალური განათლების მნიშვნელობა
                 </h3>
-                <p class="article-card__excerpt" data-i18n="article1_excerpt">
+                <p class="article-card__excerpt" id="article1_excerpt">
                   როგორ ვასწავლოთ ახალგაზრდებს სექსუალობა სწორად და კულტურულად – პროფესორის
                   მოსაზრება.
                 </p>
-                <a href="#" class="article-card__link" data-i18n="article1_link">სრულად წაკითხვა</a>
+                <a href="#" class="article-card__link" id="article1_link">სრულად წაკითხვა</a>
               </div>
             </article>
 
@@ -248,14 +242,14 @@
                 class="article-card__image"
               />
               <div class="article-card__content">
-                <h3 class="article-card__title" data-i18n="article2_title">
+                <h3 class="article-card__title" id="article2_title">
                   გენდერული იდენტობის ფსიქოლოგია
                 </h3>
-                <p class="article-card__excerpt" data-i18n="article2_excerpt">
+                <p class="article-card__excerpt" id="article2_excerpt">
                   როგორ ყალიბდება გენდერული იდენტობა და რა როლი აქვს გარემოს ფსიქოლოგიურ
                   განვითარებაში.
                 </p>
-                <a href="#" class="article-card__link" data-i18n="article2_link">სრულად წაკითხვა</a>
+                <a href="#" class="article-card__link" id="article2_link">სრულად წაკითხვა</a>
               </div>
             </article>
           </div>
@@ -264,7 +258,7 @@
 
       <section class="contact" id="contact-section">
         <div class="contact__container">
-          <h1 class="contact__title fade-slide-up" data-i18n="contact_title">კონტაქტი</h1>
+          <h1 class="contact__title fade-slide-up" id="contact_title">კონტაქტი</h1>
 
           <div class="contact__info fade-slide-up">
             <div class="info-card">
@@ -282,10 +276,8 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label" data-i18n="contact_location_label">მისამართი</p>
-                <p class="info-card__text" data-i18n="  contact_location_text">
-                  თევდორე მღვდლის ქუჩა 48
-                </p>
+                <p class="info-card__label" id="contact_location_label">მისამართი</p>
+                <p class="info-card__text" id="contact_location_text">თევდორე მღვდლის ქუჩა 48</p>
               </div>
             </div>
 
@@ -304,7 +296,7 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label" data-i18n="contact_phone_label">ტელეფონი</p>
+                <p class="info-card__label" id="contact_phone_label">ტელეფონი</p>
                 <p class="info-card__text">2 527884, 599 361187</p>
               </div>
             </div>
@@ -324,7 +316,7 @@
                 </svg>
               </div>
               <div class="info-card__content">
-                <p class="info-card__label">ელ.ფოსტა</p>
+                <p id="email" class="info-card__label">ელ.ფოსტა</p>
                 <p class="info-card__text">zurab.marshania@gmail.com</p>
               </div>
             </div>
@@ -347,11 +339,11 @@
       <div class="work__clock" id="work-clock">
         <div class="work__clock-state" onclick="showClockDetails()">
           <i class="fa-solid fa-clock"></i>
-          <p>სამუშაო საათები</p>
+          <p id="clock">სამუშაო საათები</p>
         </div>
         <div class="work__clock-display" id="clockDisplay">
           <i class="fa-solid fa-xmark" onclick="hideClockDetails()"></i>
-          <p lang="ka">
+          <p id="clock_description" lang="ka">
             მოგესალმებით, მადლობა რომ დაგვიკავშირდით, შეგახსენებთ: პაციენტების მიღება (წინასწარი
             ჩაწერა ტელეფონით 599 641187 - აუცილებელია). ორშაბათიდან პარასკევის ჩათვლით 10:00-15:00.
             მისამართზე: თევდორე მღვდლის ქუჩა 48, კორპუსი 1ა, ბინა 2
@@ -369,7 +361,7 @@
                 src="img/Prof. Zurab Marshania (3).png"
                 alt="Professional Therapy Logo"
               />
-              <p class="brand-info__description">
+              <p class="brand-info__description" id="brand-desc">
                 სამედიცინო სექსოლოგია თანამედროვე მედიცინის ინტერდისციპლინარული დარგია, რომლის
                 შესწავლის საგანია ადამიანის სექსუალური ჯანმრთელობა..
               </p>
@@ -378,11 +370,11 @@
 
           <!-- Contact ინფორმაცია -->
           <div class="footer__contact">
-            <h3 class="footer__heading">კონტაქტი</h3>
+            <h3 class="footer__heading" id="contacti">კონტაქტი</h3>
             <address class="contact-info">
               <div class="aswame_icon">
                 <i class="fa-solid fa-location-dot"></i>
-                <p class="contact-info__item contact-info__item--address">
+                <p id="item-adress" class="contact-info__item contact-info__item--address">
                   თევდორე მღვდლის ქუჩა 48,<br />
                   კორპუსი 1ა, ბინა 2
                 </p>
@@ -402,24 +394,24 @@
 
           <!-- Quick Links -->
           <div class="footer__quick-links">
-            <h3 class="footer__heading">ბმულები</h3>
+            <h3 id="links" class="footer__heading">ბმულები</h3>
             <nav class="quick-links">
               <ul class="quick-links__list">
                 <li class="quick-links__item">
-                  <a href="#main-section" class="quick-links__link">მთავარი</a>
+                  <a href="#main-section" class="quick-links__link" id="main2">მთავარი</a>
                 </li>
                 <li class="quick-links__item">
-                  <a href="#bio-section" class="quick-links__link">ბიოგრაფია</a>
+                  <a href="#bio-section" class="quick-links__link" id="bio2">ბიოგრაფია</a>
                 </li>
                 <li class="quick-links__item">
-                  <a href="#contact-section" class="quick-links__link">კონტაქტი</a>
+                  <a href="#contact-section" class="quick-links__link" id="contact2">კონტაქტი</a>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="copyright-wrapper">
-          <div class="copyright">Copyright © 2025 Widagdos. All Rights Reserved.</div>
+          <div class="copyright">Copyright © 2025 Doctor Zurab Marshania. All Rights Reserved.</div>
         </div>
       </footer>
     </main>
