@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const typingSpeed = 100;
   const pauseBetweenWords = 2000;
 
-  // ტაიპინგის ფუნქცია
+  // Typing fun
   function type() {
     if (!textElement) return;
     const currentWord = wordList[wordIndex];
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(type, isDeleting ? typingSpeed / 2 : typingSpeed);
   }
 
-  // თარგმანის ობიექტი
   const translations = {
     ge: {
       '#main': 'მთავარი',
@@ -229,20 +228,18 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   };
 
-  // ენის ჩანაცვლება და ტექსტის განახლება
+  // lang exchange and text update
   function applyLanguage(langCode) {
     const selectedLang = translations[langCode];
     if (!selectedLang) return;
 
-    // განაახლე ტექსტები გვერდზე
     Object.entries(selectedLang).forEach(([selector, text]) => {
-      // wordList ცალკე
       if (selector === 'wordList') {
         wordList = text;
         wordIndex = 0;
         charIndex = 0;
         isDeleting = false;
-        type(); // თავიდან ტაიპინგის წამოწყება
+        type();
         return;
       }
       const el = document.querySelector(selector);
@@ -250,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ენის მენიუ ელემენტები
+  // lang Menu
   const langSwitcher = document.querySelector('.header__language-switcher');
   const langSelected = langSwitcher?.querySelector('.language-switcher__selected');
   const langDropdown = langSwitcher?.querySelector('.language-switcher__dropdown');
@@ -266,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
       img.addEventListener('click', e => {
         e.stopPropagation();
 
-        // დროშის შეცვლა UI-ში
+        // flag change in UI
         const selectedImg = langSelected.querySelector('img');
         if (selectedImg) {
           selectedImg.src = img.src;
@@ -280,14 +277,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // Click გარეთ ენების ჩამონათვალიდან, რომ დაიხუროს
     document.addEventListener('click', e => {
       if (!langSwitcher.contains(e.target)) {
         langDropdown.classList.remove('visible');
       }
     });
 
-    // ჩატვირთვისას დააყენე შერჩეული ენა
     const savedLang = localStorage.getItem('selectedLanguage');
     if (savedLang) {
       const savedImg = Array.from(langItems).find(img => img.dataset.language === savedLang);
