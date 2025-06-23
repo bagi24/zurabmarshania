@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
       loader.style.opacity = '0';
       setTimeout(() => {
         loader.style.display = 'none';
-      }, 500);
+      }, 0);
     }
   }
 
   // Typing animation variables
   const textElement = document.getElementById('typing-text');
-  let wordList = ['ექიმი სექსოლოგი', 'მკვლევარი']; // დააყენე თავდაპირველად ქართული
+  let wordList = ['ექიმი სექსოლოგი', 'მკვლევარი'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ge: {
       '#main': 'მთავარი',
       '#bio': 'ბიოგრაფია',
-      '#articles': 'სტატიები',
+      '#articles': 'ინტერვიუები',
       '#books': 'წიგნები',
       '#contact': 'კონტაქტი',
       '#hero_title': 'ზურაბ მარშანია',
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '#bio_title': 'მოკლე ბიოგრაფია',
       '#bio_subtitle': 'ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი',
       '#bio_text':
-        'ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine) აფილირებული ეროვნული საზოგადოების (National Associated Society) - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988 წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას (პაციენტების ამბულატორიულ მიღებას) აგრძელებს &quot;ზურაბ მარშანიას სამედიცინო სექსოლოგიის კაბინეტში&quot; (წინასწარი ჩაწერა ტელეფონზე 599 641187 აუცილებელია) ორშაბათიდან პარასკევის ჩათვლით 10 საათიდან 15 საათამდე, მისამართზე, ქ.თბილისი, თევდორე მღვდლის ქ. 48, კორპუსი Iა, ბინა 2. ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში, პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში. ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.',
+        'ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine) აფილირებული ეროვნული საზოგადოების (National Associated Society) - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988 წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას (პაციენტების ამბულატორიულ მიღებას) აგრძელებს "ზურაბ მარშანიას სამედიცინო სექსოლოგიის კაბინეტში"; ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში, პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში. ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.',
       '#articles_title': 'სტატიები',
       '#article1_title': 'სექსუალური განათლების მნიშვნელობა',
       '#article1_excerpt':
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
     en: {
       '#main': 'Main',
       '#bio': 'Biography',
-      '#articles': 'Articles',
+      '#articles': 'Interviews',
       '#books': 'Books',
       '#contact': 'Contact',
       '#hero_title': 'Zurab Marshania',
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '#bio_title': 'Short Biography',
       '#bio_subtitle': 'Zurab Marshania - Sexologist, Academic Doctor of Medicine',
       '#bio_text':
-        'Zurab Marshania, clinician - sexologist, MD, PhD, Full Professor of Sexology at the Faculty of Medicine of the Georgian National University - SEU, President of the Georgian Society of Medical Sexology, an affiliated national society with the European Society for Medical Sexology (ESSM), a full member of the Georgian Academy of Natural Sciences. He has been working as a clinician-sexologist since 1988 (he headed the andrology department at the I. Zhordania Scientific Research Institute). Currently, he continues his clinical practice (Outpatient appointment) at the &quot;Zurab Marshania Sexual Medicine Office&quot; (pre-registration by phone 599 641187 is required) from Monday to Friday from 10:00 to 15:00 at the address: Tbilisi, Tevdore Mgvdeli Street 48, building Ia, apt. 2. Zurab Marshania has published lots of scientific papers and gives presentations at international conferences in Georgia, and in the USA, Spain, Portugal, Turkey, Sweden, Denmark, Estonia and Ukraine, and has been invited to give public lectures on male and female sexual dysfunction in the Czech Republic, Hungary and Slovenia. Z. Marshania also holds a doctorate in political science, was awarded the diplomatic rank of Envoy Extraordinary and Plenipotentiary in 1998 and headed Georgia&#39;s diplomatic missions in the Baltic States and Ukraine for several years.',
+        'Zurab Marshania, clinician - sexologist, MD, PhD, Full Professor of Sexology at the Faculty of Medicine of the Georgian National University - SEU, President of the Georgian Society of Medical Sexology, an affiliated national society with the European Society for Medical Sexology (ESSM), a full member of the Georgian Academy of Natural Sciences. He has been working as a clinician-sexologist since 1988 (he headed the andrology department at the I. Zhordania Scientific Research Institute). Currently, he continues his clinical practice (Outpatient appointment) at the Zurab Marshania Sexual Medicine Office; Zurab Marshania has published lots of scientific papers and gives presentations at international conferences in Georgia, and in the USA, Spain, Portugal, Turkey, Sweden, Denmark, Estonia and Ukraine, and has been invited to give public lectures on male and female sexual dysfunction in the Czech Republic, Hungary and Slovenia. Z. Marshania also holds a doctorate in political science, was awarded the diplomatic rank of Envoy Extraordinary and Plenipotentiary in 1998 and headed Georgia&#39;s diplomatic missions in the Baltic States and Ukraine for several years.',
       '#articles_title': 'Articles',
       '#article1_title': 'The Importance of Sexual Education',
       '#article1_excerpt':
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ru: {
       '#main': 'Главный',
       '#bio': 'Биография',
-      '#articles': 'Статьи',
+      '#articles': 'Интервью',
       '#books': 'Книги',
       '#contact': 'Контакт',
       '#hero_title': 'Зураб Маршания',
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '#bio_title': 'Краткая биография',
       '#bio_subtitle': 'Зураб Маршания - сексолог, академический доктор медицинских наук',
       '#bio_text':
-        'Зураб Маршания - врач-сексолог, доктор медицинских наук, профессор сексологии факультета медицины грузинского национального университета - СЕУ, президент грузинского общества медицинской сексологии, аффилированного национального объединения с европейским обществом медицинской сексологии (ESSM), действительный член грузинской академии естественных наук. Работаем врачом сексологом с 1988 году ( руководил отделом андрологии научно-исследовательского институте имени И. Жордания). В настоящее время продолжает клиническую практику (амбулаторный прием пациентов) в «Кабинете медицинской сексологии Зураба Маршания» (предварительная запись по телефону 599 641187 обязательна) с понедельника по пятницу с 10:00 до 15:00 по адресу: г. Тбилиси, ул. Тевдоре Мгвдели 48, корпус Ia, кв. 2. Зураб Маршания опубликовал десятки научных работ и выступил с докладами на международных конференциях в Грузии, США, Испании, Португалии, Турции, Швеции, Дании, Эстонии и Украине, а также был приглашен для чтения публичных лекций по проблемам мужской и женской сексуальной дисфункции в Чехию, Венгрию и Словению. З. Маршания также имеет степень доктора политических наук, в 1998 году ему был присвоен дипломатический ранг Чрезвычайного и Полномочного Посланника, и на протяжении ряда лет возглавлял дипломатические миссии Грузии в странах Балтии и в Украине.',
+        'Зураб Маршания - врач-сексолог, доктор медицинских наук, профессор сексологии факультета медицины грузинского национального университета - СЕУ, президент грузинского общества медицинской сексологии, аффилированного национального объединения с европейским обществом медицинской сексологии (ESSM), действительный член грузинской академии естественных наук. Работаем врачом сексологом с 1988 году ( руководил отделом андрологии научно-исследовательского институте имени И. Жордания). В настоящее время продолжает клиническую практику (амбулаторный прием пациентов) в «Кабинете медицинской сексологии Зураба Маршания». Зураб Маршания опубликовал десятки научных работ и выступил с докладами на международных конференциях в Грузии, США, Испании, Португалии, Турции, Швеции, Дании, Эстонии и Украине, а также был приглашен для чтения публичных лекций по проблемам мужской и женской сексуальной дисфункции в Чехию, Венгрию и Словению. З. Маршания также имеет степень доктора политических наук, в 1998 году ему был присвоен дипломатический ранг Чрезвычайного и Полномочного Посланника, и на протяжении ряда лет возглавлял дипломатические миссии Грузии в странах Балтии и в Украине.',
       '#articles_title': 'Статьи',
       '#article1_title': 'Значение сексуального образования',
       '#article1_excerpt':
@@ -402,5 +402,5 @@ document.addEventListener('DOMContentLoaded', function () {
   type();
 
   // Hide loader immediately
-  setTimeout(hideLoader, 0);
+  setTimeout(hideLoader, 1000);
 });
