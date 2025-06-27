@@ -429,11 +429,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Burger menu toggle
   const burger = document.getElementById('burger');
+  const languagetransform = document.getElementById('language-transform');
   const navList = document.getElementById('nav');
   if (burger && navList) {
     burger.addEventListener('click', () => {
       navList.classList.toggle('active');
       burger.classList.toggle('open');
+      languagetransform.classList.toggle('act');
     });
   }
 
@@ -446,16 +448,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const clock = document.getElementById('clockDisplay');
     if (clock) clock.style.display = 'none';
   };
-
-  // Biography toggle
-  // window.toggleBio = function () {
-  //   const bioText = document.querySelector('.bio__text');
-  //   const button = document.querySelector('.bio__toggle-btn');
-  //   if (bioText && button) {
-  //     const isExpanded = bioText.classList.toggle('expanded');
-  //     button.textContent = isExpanded ? 'ჩაკეცვა' : 'სრულად ნახვა';
-  //   }
-  // };
 
   // Biography toggle
   window.toggleBio = function () {
