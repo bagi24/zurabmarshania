@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '#email': 'ელ.ფოსტა',
       '#clock': 'სამუშაო საათები',
       '#clock_description':
-        'მოგესალმებით, მადლობა რომ დაგვიკავშირდით, შეგახსენებთ: პაციენტების მიღება (წინასწარი ჩაწერა ტელეფონით 599 641187 - აუცილებელია). ორშაბათიდან პარასკევის ჩათვლით 10:00-15:00. მისამართზე: თევდორე მღვდლის ქუჩა 48, კორპუსი 1ა, ბინა 2',
+        'მოგესალმებით. გმადლობთ, რომ დაგვიკავშირდით. გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება წინასწარი ჩაწერით ტელეფონით: 599 641187 (აუცილებლად). მიღების საათებია ორშაბათიდან პარასკევის ჩათვლით, 10:00–15:00 საათამდე. მისამართი: თევდორე მღვდლის ქუჩა №48, კორპუსი 1ა, ბინა 2.',
       '#brand-desc':
         'სამედიცინო სექსოლოგია თანამედროვე მედიცინის ინტერდისციპლინარული დარგია, რომლის შესწავლის საგანია ადამიანის სექსუალური ჯანმრთელობა..',
       '#item-adress': 'თევდორე მღვდლის ქუჩა 48, კორპუსი 1ა, ბინა 2',
@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
       '#article-card-excerpt-1':
         ' პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.',
       '#article-card-link-1': ' სრულად წაკითხვა',
+      '#magic-text':
+        'ვიზიტის დასაჯავშნად დაგვიკავშირდით მობილურ ნომერზე: +995 599 641187 ან ქალაქის ტელეფონიდან:   2 52 78 84',
     },
     en: {
       '#main': 'Main',
@@ -224,6 +226,8 @@ document.addEventListener('DOMContentLoaded', function () {
       '#article-card-excerpt-1':
         'Professor Zurab Marshania discusses diseases that may develop in women due to gynecological causes.',
       '#article-card-link-1': 'Read More',
+      '#magic-text':
+        'To book a visit, contact us on the mobile number: +995 599 641187 or from the city phone number: 2 52 78 84',
     },
     ru: {
       '#main': 'Главный',
@@ -312,6 +316,8 @@ document.addEventListener('DOMContentLoaded', function () {
       '#article-card-excerpt-1':
         'Профессор Зураб Маршания говорит о заболеваниях, которые могут развиваться у женщин по гинекологическим причинам.',
       '#article-card-link-1': 'Читать полностью',
+      '#magic-text':
+        'Чтобы записаться на прием, позвоните нам по мобильному номеру: +995 599 641187 или по городскому телефону: 2 52 78 84',
     },
   };
 
@@ -442,12 +448,42 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Biography toggle
+  // window.toggleBio = function () {
+  //   const bioText = document.querySelector('.bio__text');
+  //   const button = document.querySelector('.bio__toggle-btn');
+  //   if (bioText && button) {
+  //     const isExpanded = bioText.classList.toggle('expanded');
+  //     button.textContent = isExpanded ? 'ჩაკეცვა' : 'სრულად ნახვა';
+  //   }
+  // };
+
+  // Biography toggle
   window.toggleBio = function () {
     const bioText = document.querySelector('.bio__text');
     const button = document.querySelector('.bio__toggle-btn');
     if (bioText && button) {
       const isExpanded = bioText.classList.toggle('expanded');
-      button.textContent = isExpanded ? 'ჩაკეცვა' : 'სრულად ნახვა';
+
+      // Get current language
+      const savedLang = localStorage.getItem('selectedLanguage') || 'ge';
+      const translations = {
+        ge: {
+          collapse: 'ჩაკეცვა',
+          expand: 'სრულად ნახვა',
+        },
+        en: {
+          collapse: 'Collapse',
+          expand: 'Read more',
+        },
+        ru: {
+          collapse: 'Свернуть',
+          expand: 'Читать полностью',
+        },
+      };
+
+      button.textContent = isExpanded
+        ? translations[savedLang].collapse
+        : translations[savedLang].expand;
     }
   };
 
