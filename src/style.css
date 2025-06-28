@@ -2087,27 +2087,93 @@ body {
 /* ✅ მობილური (პატარა ეკრანები) */
 @media (max-width: 479px) {
   /* Small mobile phones */
+  body {
+    overflow-x: hidden;
+  }
+
   .header {
-    padding: 8px 10px;
+    padding: 8px 5px;
+  }
+
+  .header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .header__logo {
+    width: 70px;
+    padding: 5px;
+  }
+
+  .header.shrink .header__logo {
     width: 60px;
+  }
+
+  .burger {
+    display: block;
+    font-size: 32px;
+    color: #ed1a60;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .burger.open::after {
+    position: relative;
+    left: 200px;
+    top: 0;
+  }
+
+  .header__nav,
+  .header__language-switcher,
+  .city-phone {
+    display: none;
+  }
+
+  .header__nav.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #f974a0;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-list__link {
+    font-size: 16px;
+    color: white;
   }
 
   .main__container {
     height: auto;
-    padding: 40px 0;
+    padding: 80px 10px 40px;
+    flex-direction: column-reverse;
   }
 
   .hero {
     min-width: 100%;
-    padding: 0 15px;
+    height: auto;
+    padding: 20px 10px;
     text-align: center;
+    align-items: center;
   }
 
   .hero__title {
     font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .hero__subtitle {
@@ -2115,67 +2181,117 @@ body {
     margin-bottom: 20px;
   }
 
-  .hero__button {
-    padding: 10px 20px;
+  .hero__image {
+    width: 90%;
+    height: auto;
+    position: static;
+    margin-bottom: 20px;
   }
 
   .call-box {
-    width: 240px;
-    padding: 12px 18px;
+    display: none;
   }
 
-  .phone-number {
-    font-size: 16px;
+  .inSpace {
+    flex-direction: column;
+  }
+
+  .bio__container {
+    flex-direction: column;
+    padding: 0 15px;
+    gap: 2rem;
   }
 
   .bio__image {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
 
   .bio__title {
     font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .bio__title::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .bio__subtitle {
     font-size: 1.1rem;
+    text-align: center;
   }
 
-  .service-card__title {
-    font-size: 1.3rem;
+  .services__grid {
+    grid-template-columns: 1fr;
   }
 
-  .work__clock-state {
-    padding: 10px 18px;
+  .services-container {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .work__clock-display {
-    width: 280px;
-    padding: 18px;
-  }
-
-  .media-icons {
-    padding: 8px 3px;
-    gap: 15px;
-  }
-
-  .media-icons a {
-    font-size: 20px;
+  .service-category {
+    width: 100%;
+    height: auto;
+    padding: 20px;
   }
 
   .book-card {
-    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .book-cover {
+    width: 100%;
+    height: 250px;
   }
 
   .book-actions {
     flex-direction: column;
+    gap: 10px;
   }
 
-  .interviews__list {
+  .contact__info {
     grid-template-columns: 1fr;
   }
 
-  .text-articles__list {
+  .footer__container {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .brand-info__description {
+    width: 100%;
+  }
+
+  #scrollToTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    bottom: 80px;
+    right: 15px;
+  }
+
+  .work__clock {
+    right: 15px;
+    bottom: 5px;
+  }
+
+  .work__clock-state {
+    padding: 10px 15px;
+  }
+
+  .work__clock-display {
+    width: 280px;
+    padding: 15px;
+  }
+
+  .media-icons {
+    display: none;
+  }
+
+  .magic-text span {
+    font-size: 0.9rem;
   }
 }
