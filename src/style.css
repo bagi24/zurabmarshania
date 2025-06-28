@@ -843,8 +843,9 @@ body {
 
 .work__clock {
   position: fixed;
-  bottom: 30px;
+  bottom: 10px;
   right: 30px;
+
   z-index: 9999;
   font-family: inherit;
   animation: floating 6s ease-in-out infinite, slideInLeft 1.5s ease-out 0.3s forwards;
@@ -1623,6 +1624,30 @@ body {
     transform: translateX(100%);
   }
 }
+
+/* სტილები ღილაკისთვის */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #ed1a60;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  display: none; /* თავიდან არ ჩანს */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #81002b;
+}
+
 /* 💻💻💻💻💻💻
 
 
@@ -1733,7 +1758,8 @@ body {
   /* Tablets (landscape) */
 
   .header__container {
-    max-width: 720px;
+    display: flex;
+    flex-direction: row;
   }
 
   .header__language-switcher {
@@ -1753,6 +1779,9 @@ body {
     padding: 8px;
     transition: all 0.3s ease;
   }
+  .main {
+    overflow: hidden;
+  }
 
   .main__container {
     margin-top: 100px;
@@ -1761,7 +1790,8 @@ body {
   .burger {
     display: block;
     font-size: 50px;
-    color: #ff00ee;
+    /* color: #ff00ee; */
+    color: #ed1a60;
     background: none;
     border: none;
     cursor: pointer;
@@ -1772,7 +1802,16 @@ body {
   .burger.open::after {
     position: relative;
     top: 0;
-    left: 280px;
+    left: 335px;
+  }
+
+  #scrollToTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    bottom: 100px;
+    right: 20px;
   }
 
   .act {
@@ -1780,14 +1819,19 @@ body {
     z-index: 1000;
     position: relative;
     top: 85px;
-    right: -20px;
+    right: 10px;
+  }
+
+  .header__language-switcher {
+    background-color: #ed1a60;
   }
 
   .hero {
     min-width: 100%;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
   }
 
   .hero__image {
@@ -1871,25 +1915,24 @@ body {
 /* ✅ ტაბლეტები ვერტიკალურად და პატარა მობილურები */
 @media (min-width: 480px) and (max-width: 767px) {
   /* Tablets (portrait) and large phones */
+  body {
+    overflow-x: hidden;
+  }
   .header__container {
-    max-width: 720px;
+    width: 100%;
+    flex-wrap: wrap; /* პატარა ზომაზე რომ გადაიწყვოს */
   }
-
-  .city-phone {
-    display: none;
-  }
-
   .header__logo {
     width: 80px;
   }
-  .media-icons {
+
+  .header__language-switcher {
     display: none;
   }
-  .burger.open::after {
-    position: relative;
-    top: 100px;
-    right: 300px;
+  .header__nav {
+    display: none;
   }
+
   .header.shrink {
     padding: 10px 10px;
     transition: all 0.3s ease;
@@ -1900,14 +1943,80 @@ body {
     padding: 8px;
     transition: all 0.3s ease;
   }
-  .work__clock {
-    position: fixed;
-    bottom: 30px;
+  .main {
+    overflow: hidden;
+  }
+  .main__container {
+    margin-top: 100px;
+  }
+
+  .burger {
+    display: block;
+    font-size: 40px;
+
+    color: #ed1a60;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .burger.open::after {
+    position: relative;
+    left: 280px;
+
+    top: 0;
+  }
+
+  #scrollToTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    bottom: 100px;
     right: 30px;
-    z-index: 9999;
-    font-family: inherit;
-    animation: floating 6s ease-in-out infinite, slideInLeft 1.5s ease-out 0.3s forwards;
-    opacity: 0;
+  }
+
+  .act {
+    display: block;
+    z-index: 1000;
+    position: relative;
+    top: 135px;
+    right: 10px;
+  }
+
+  .nav-list__link {
+    font-size: 18px;
+  }
+  .main__container {
+    padding: 20px 5px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .header__language-switcher {
+    background-color: #ed1a60;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .hero__image {
+    position: relative;
+    width: 70%;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  .media-icons {
+    display: none;
+  }
+  .city-phone {
+    display: none;
   }
 
   .header__nav.active {
@@ -1915,7 +2024,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 74%;
+    width: 100%;
     height: 30vh;
     background-color: #f974a0;
     z-index: 1000;
@@ -1925,86 +2034,53 @@ body {
     justify-content: center;
     color: white;
     opacity: 0.9;
+    padding: 5px;
   }
 
-  .burger {
-    display: block;
-    font-size: 50px;
-    color: #ff00ee;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    cursor: pointer;
-  }
-  .header__language-switcher {
-    display: none;
-  }
-  .header__nav {
-    display: none;
-  }
-
-  .burger.open::after {
-    position: relative;
-    top: 0;
-    left: 280px;
-  }
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__subtitle {
-    font-size: 1rem;
+  .inSpace {
+    flex-direction: column;
   }
 
   .call-box {
     display: none;
   }
 
-  .inSpace {
-    display: flex;
-    flex-direction: column;
-  }
-
   .bio__container {
-    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
   }
 
   .bio__image {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .bio__content {
+    text-align: center;
+  }
+
+  .bio__title::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .services__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .services-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .service-category {
-    width: 100%;
-    height: auto;
-  }
-
-  .footer__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .brand-info__description {
-    width: 100%;
+    flex-wrap: wrap;
   }
 
   .book-card {
     flex-direction: column;
+    max-width: 400px;
   }
 
   .book-cover {
     width: 100%;
-    height: 250px;
+    height: 300px;
   }
 }
 

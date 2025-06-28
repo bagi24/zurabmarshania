@@ -519,3 +519,23 @@ document.addEventListener('DOMContentLoaded', function () {
   // Hide loader immediately
   setTimeout(hideLoader, 1000);
 });
+
+// მოვძებნოთ ღილაკი
+const scrollBtn = document.getElementById('scrollToTopBtn');
+
+// როცა იუზერი სქროლავს
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = 'block'; // გამოჩნდეს
+  } else {
+    scrollBtn.style.display = 'none'; // დაიმალოს
+  }
+};
+
+// დაჭერისას ასქროლოს ზემოთ
+scrollBtn.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // რბილად ასქროლოს
+  });
+});
