@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 /* Header*/
@@ -28,11 +28,11 @@ body {
 }
 
 .burger.open::after {
-  content: '✖';
+  content: "✖";
 }
 
 .burger::after {
-  content: '☰';
+  content: "☰";
 }
 
 .city-phone {
@@ -208,7 +208,7 @@ body {
 
 .main {
   padding: 0px 0px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .main__container {
@@ -221,7 +221,7 @@ body {
 
   padding-bottom: 20px;
 
-  background-image: url('img/homehero.png');
+  background-image: url("img/homehero.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -230,7 +230,7 @@ body {
 }
 
 .main__container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -394,7 +394,7 @@ body {
 }
 
 .bio__title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -474,7 +474,7 @@ body {
 }
 
 .services__title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -562,7 +562,7 @@ body {
 }
 
 .contact__title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -636,7 +636,7 @@ body {
   background-color: #f974a0;
   color: #ecf0f1;
   padding: 3rem 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .footer__container {
@@ -676,7 +676,7 @@ body {
 }
 
 .footer__heading::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -747,7 +747,11 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(173, 216, 230, 0.8));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 203, 0.8),
+    rgba(173, 216, 230, 0.8)
+  );
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   border: 2px solid rgba(255, 255, 255, 0.25);
@@ -757,7 +761,8 @@ body {
   z-index: 1000;
   transition: all 0.4s ease-in-out;
 
-  animation: floating 6s ease-in-out infinite, slideInLeft 1.5s ease-out 0.3s forwards;
+  animation: floating 6s ease-in-out infinite,
+    slideInLeft 1.5s ease-out 0.3s forwards;
   opacity: 0;
 }
 @keyframes slideInLeft {
@@ -848,7 +853,8 @@ body {
 
   z-index: 9999;
   font-family: inherit;
-  animation: floating 6s ease-in-out infinite, slideInLeft 1.5s ease-out 0.3s forwards;
+  animation: floating 6s ease-in-out infinite,
+    slideInLeft 1.5s ease-out 0.3s forwards;
   opacity: 0;
 }
 
@@ -1060,7 +1066,11 @@ body {
   padding: 60px 20px;
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(255, 240, 245, 0.8) 0%, rgba(225, 240, 255, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 240, 245, 0.8) 0%,
+    rgba(225, 240, 255, 0.8) 100%
+  );
   border-radius: 24px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
@@ -1081,7 +1091,7 @@ body {
 }
 
 .books-promo__title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -1114,7 +1124,7 @@ body {
 }
 
 .book-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1213,7 +1223,7 @@ body {
 }
 
 .book-author::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -1276,7 +1286,7 @@ body {
 }
 
 .book-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1317,7 +1327,7 @@ body {
 }
 
 .interviews__title::after {
-  content: '';
+  content: "";
   width: 80px;
   height: 4px;
   background-color: #0066cc;
@@ -1372,7 +1382,7 @@ body {
 }
 
 .text-articles__title::after {
-  content: '';
+  content: "";
   width: 70px;
   height: 4px;
   background-color: #c92f2f;
@@ -1443,7 +1453,7 @@ body {
   flex-direction: column;
   color: #f0f4f8;
   padding: 100px 20px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .services-title {
@@ -1456,7 +1466,7 @@ body {
 }
 
 .services-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -1488,8 +1498,8 @@ body {
 .service-category:hover {
   transform: rotateY(10deg) scale(1.06);
   background: radial-gradient(circle at top left, #f974a0, #ffb6c1, #ffdee9);
-  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.3), 0 0 15px rgba(0, 180, 216, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.4);
   transition: all 0.5s ease-in-out;
   animation: dreamyPulse 2s ease-in-out infinite;
@@ -1519,7 +1529,7 @@ body {
 }
 
 .category-title::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   left: 0;
   top: 0;
@@ -1543,7 +1553,7 @@ body {
 }
 
 .service-list li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #00b4d8;
@@ -1569,8 +1579,8 @@ body {
 .magic-text {
   display: inline-block;
   white-space: nowrap;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
-    Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   animation: scroll-text 15s linear infinite;
   will-change: transform;
 }
@@ -1587,7 +1597,7 @@ body {
 /* გრადიენტური მასკები უფრო ელეგანტური ეფექტისთვის */
 .magic-banner::before,
 .magic-banner::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1598,12 +1608,20 @@ body {
 
 .magic-banner::before {
   left: 0;
-  background: linear-gradient(to right, rgba(185, 111, 148, 1), rgba(185, 111, 148, 0));
+  background: linear-gradient(
+    to right,
+    rgba(185, 111, 148, 1),
+    rgba(185, 111, 148, 0)
+  );
 }
 
 .magic-banner::after {
   right: 0;
-  background: linear-gradient(to left, rgba(239, 244, 249, 1), rgba(239, 244, 249, 0));
+  background: linear-gradient(
+    to left,
+    rgba(239, 244, 249, 1),
+    rgba(239, 244, 249, 0)
+  );
 }
 
 /* მოძრაობის ანიმაცია */
@@ -2359,7 +2377,7 @@ body {
   /* Gradient masks for smoother edges */
   .magic-banner::before,
   .magic-banner::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2370,11 +2388,19 @@ body {
 
   .magic-banner::before {
     left: 0;
-    background: linear-gradient(to right, rgba(185, 111, 148, 1), rgba(185, 111, 148, 0));
+    background: linear-gradient(
+      to right,
+      rgba(185, 111, 148, 1),
+      rgba(185, 111, 148, 0)
+    );
   }
 
   .magic-banner::after {
     right: 0;
-    background: linear-gradient(to left, rgba(239, 244, 249, 1), rgba(239, 244, 249, 0));
+    background: linear-gradient(
+      to left,
+      rgba(239, 244, 249, 1),
+      rgba(239, 244, 249, 0)
+    );
   }
 }
