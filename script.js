@@ -139,8 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         " პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.",
       "#article-card-link-1": " სრულად წაკითხვა",
-      "#magic-text":
-        "ვიზიტის დასაჯავშნად დაგვიკავშირდით  +995 599 641187 ან  2 52 78 84",
     },
     en: {
       "#main": "Main",
@@ -231,8 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         "Professor Zurab Marshania discusses diseases that may develop in women due to gynecological causes.",
       "#article-card-link-1": "Read More",
-      "#magic-text":
-        "To book a visit, contact us on the mobile number: +995 599 641187 or from the city phone number: 2 52 78 84",
     },
     ru: {
       "#main": "Главный",
@@ -324,8 +320,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         "Профессор Зураб Маршания говорит о заболеваниях, которые могут развиваться у женщин по гинекологическим причинам.",
       "#article-card-link-1": "Читать полностью",
-      "#magic-text":
-        "Чтобы записаться на прием, позвоните нам по мобильному номеру: +995 599 641187 или по городскому телефону: 2 52 78 84",
     },
   };
 
