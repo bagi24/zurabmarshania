@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // დეფოლტ ენა - ქართული
+  let currentLang = localStorage.getItem("selectedLanguage") || "ge";
   // Loader function
   function hideLoader() {
     const loader = document.getElementById("gender-loader");
@@ -53,13 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
       "#main": "მთავარი",
       "#bio": "ბიოგრაფია",
       "#articles": "ინტერვიუები",
-      "#serve": "მომსახურება",
+      "#serve": "სერვისები",
       "#books": "წიგნები",
       "#contact": "კონტაქტი",
       "#hero_title": "ზურაბ მარშანია",
       "#hero_subtitle": "პროფესორი",
       "#hero_button": "დეტალურად",
-      "#call_desc": "ვიზიტის, მათ შორის ონლაინ კონსულტაციების დასაჯავშნად აუცილებლად დაგვიკავშირდით წინასწარ ",
+      "#call_desc":
+        "ვიზიტის, მათ შორის ონლაინ კონსულტაციების დასაჯავშნად აუცილებლად დაგვიკავშირდით წინასწარ ",
       "#books_promo_title": "ავტორის გამოცემა",
       "#bestseller_badge": "ბესტსელერი",
       "#new_badge": "ახალი",
@@ -101,8 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
       "#book2_author": "ზურაბ მარშანია",
       "#email": "ელ.ფოსტა",
       "#clock": "სამუშაო საათები",
-      "#clock_description":
-        " მოგესალმებით. <br/> გმადლობთ, რომ დაგვიკავშირდით. გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება წინასწარი ჩაწერით, ნომერზე: 599 641187. კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.<br/> მიღების საათებია ორშაბათიდან პარასკევის ჩათვლით, 10:00–15:00 საათამდე. მისამართი: თევდორე მღვდლის ქუჩა №48, კორპუსი 1ა, ბინა 2.",
+      "#clock_description": `
+  <p>მოგესალმებით,</p>
+  <p>გმადლობთ, რომ დაგვიკავშირდით.</p> <p> გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება წინასწარი ჩაწერით, ნომერზე: 599 641187. კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.</p>
+  <p>მიღების საათებია ორშაბათიდან პარასკევის ჩათვლით, 10:00–15:00 საათამდე. მისამართი: თევდორე მღვდლის ქუჩა №48, კორპუსი 1ა, ბინა 2.</p>
+`,
+
       "#brand-desc":
         "სამედიცინო სექსოლოგია თანამედროვე მედიცინის ინტერდისციპლინარული დარგია, რომლის შესწავლის საგანია ადამიანის სექსუალური ჯანმრთელობა..",
       "#item-adress": "თევდორე მღვდლის ქუჩა 48",
@@ -110,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#bio2": "ბიოგრაფია",
       "#contact2": "კონტაქტი",
       "#srulad": "სრულად ნახვა",
-      "#serve-title": "მომსახურება",
+      "#serve-title": "სერვისები",
       "#man-category-title": "მამაკაცის სქესობრივი დისფნუქცია",
       "#man-category-title-1": "ერექციული დისფუნქია",
       "#man-category-title-2": "ნაადრევი ეაკულაცია",
@@ -150,7 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#hero_title": "Zurab Marshania",
       "#hero_subtitle": "Professor",
       "#hero_button": "Details",
-      "#call_desc": "To book a visit, including online consultations, please contact us in advance",
+      "#call_desc":
+        "To book a visit, including online consultations, please contact us in advance",
       "#books_promo_title": "Author's Publication",
       "#bestseller_badge": "Bestseller",
       "#new_badge": "New",
@@ -179,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article2_link": "Read more",
       "#contact_title": "Contact",
       "#contact_location_label": "Location",
-      "#contact_location_text": "Tbilisi, Teudore Mghvladli 48",
+      "#contact_location_text": "Tbilisi, Teudore Mghvdeli 48",
       "#contact_phone_label": "Phone",
       "#contact_phone_text": "+995 599 12 34 56",
       "#contact_call_text": "Contact us to book a visit",
@@ -191,8 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "#book2_author": "Zurab Marshania",
       "#email": "Email",
       "#clock": "Working hours",
-      "#clock_description":
-        "are accepting patients (pre-registration by phone 599 641187 - required). Monday to Friday 10:00-15:00. Address: 48 Tevdore Mgvdli Street, Building 1A, Apartment 2",
+      "#clock_description": `<p>Welcome,</p>
+<p>Thank you for contacting us. Please note that patients are seen by prior appointment only, at the following number: 599 641187. Consultations are available in Georgian, English, and Russian languages.</p>
+<p>Reception hours are from Monday to Friday, 10:00 AM – 3:00 PM. Address: 48 Tevdore Mghvdlis Street, Building 1A, Apartment 2.</p>`,
       "#brand-desc":
         "Medical sexology is an interdisciplinary field of modern medicine that studies human sexual health",
       "#item-adress": "48 Tevdore Mghvdeli Street",
@@ -240,7 +249,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#hero_title": "Зураб Маршания",
       "#hero_subtitle": "Профессор",
       "#hero_button": "Подробнее",
-      "#call_desc": "Чтобы записаться на прием, включая онлайн-консультации, пожалуйста, свяжитесь с нами заранее.",
+      "#call_desc":
+        "Чтобы записаться на прием, включая онлайн-консультации, пожалуйста, свяжитесь с нами заранее.",
       "#books_promo_title": "Издание автора",
       "#bestseller_badge": "Бестселлер",
       "#new_badge": "Новый",
@@ -269,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article2_link": "Читать полностью",
       "#contact_title": "Контакт",
       "#contact_location_label": "Местоположение",
-      "#contact_location_text": "Тбилиси, ул. Тевдоре Мгвлдли, 48",
+      "#contact_location_text": "Тбилиси, ул. Тевдоре Мгвдели, 48",
       "#contact_phone_label": "Телефон",
       "#contact_phone_text": "+995 599 12 34 56",
       "#contact_call_text": "Свяжитесь с нами для записи на прием",
@@ -281,8 +291,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "#book2_author": "Зураб Маршания",
       "#email": "почта",
       "#clock": "рабочее время",
-      "#clock_description":
-        "Добро пожаловать, спасибо, что обратились к нам, напоминаем: Мы принимаем пациентов (предварительная запись по телефону 599 641187 - обязательна). С понедельника по пятницу с 10:00 до 15:00. Адрес: ул. Тевдоре Мгвдли, 48, корпус 1А, квартира 2",
+      "#clock_description": `<p>Добро пожаловать,</p>
+<p>Благодарим вас за обращение. Пожалуйста, обратите внимание, что приём пациентов осуществляется только по предварительной записи по номеру: 599 641187. Консультации проводятся на грузинском, английском и русском языках.</p>
+<p>Часы приёма: с понедельника по пятницу, с 10:00 до 15:00. Адрес: улица Тевдоре Мгвдли №48, корпус 1А, квартира 2.</p>
+`,
       "#brand-desc":
         "Медицинская сексология — междисциплинарная область современной медицины, изучающая сексуальное здоровье человека.",
       "#item-adress": "Улица Тевдоре Мгвдели, 48",
@@ -323,8 +335,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  // lang exchange and text update
+  document.getElementById("clockDisplay").innerHTML = `
+  <i class="fa-solid fa-xmark close-icon" onclick="hideClockDetails()"></i>
+  ${translations[currentLang]["#clock_description"]}
+`;
+
   function applyLanguage(langCode) {
+    currentLang = langCode;
     const selectedLang = translations[langCode];
     if (!selectedLang) return;
 
@@ -337,9 +354,29 @@ document.addEventListener("DOMContentLoaded", function () {
         type();
         return;
       }
+
       const el = document.querySelector(selector);
-      if (el) el.textContent = text;
+      if (el) {
+        // თუ ტექსტში HTML ტეგებია, გამოვიყენოთ innerHTML
+        if (text.includes("<") || text.includes("&")) {
+          el.innerHTML = text;
+        } else {
+          el.textContent = text;
+        }
+      }
     });
+
+    // დამატებით განაახლე clockDisplay ბლოკიც — თუ ღილაკით იძახის
+    const clockDisplay = document.getElementById("clockDisplay");
+    if (clockDisplay) {
+      clockDisplay.innerHTML = `
+      <i class="fa-solid fa-xmark close-icon" onclick="hideClockDetails()"></i>
+      ${translations[langCode]["#clock_description"]}
+    `;
+    }
+
+    // განაახლე currentLang ცვლადიც, თუ გაქვს სადმე გამოყენებული
+    window.currentLang = langCode;
   }
 
   // lang Menu
@@ -453,14 +490,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Work hours show/hide
+  // სამუშაო საათების ჩვენება
   window.showClockDetails = function () {
     const clock = document.getElementById("clockDisplay");
-    if (clock) clock.style.display = "block";
+    if (clock) {
+      clock.style.display = "block";
+
+      // გარეთ დაკლიკების დამჭერი
+      setTimeout(() => {
+        document.addEventListener("click", handleOutsideClick);
+      }, 0);
+    }
   };
+
+  // დამალვა
   window.hideClockDetails = function () {
     const clock = document.getElementById("clockDisplay");
     if (clock) clock.style.display = "none";
+
+    // მოვაშოროთ click event როცა დაიმალა
+    document.removeEventListener("click", handleOutsideClick);
   };
+
+  // გარეთ დაკლიკების შემოწმება
+  function handleOutsideClick(event) {
+    const clockBlock = document.getElementById("work-clock");
+    if (clockBlock && !clockBlock.contains(event.target)) {
+      hideClockDetails();
+    }
+  }
 
   // Biography toggle
   window.toggleBio = function () {
