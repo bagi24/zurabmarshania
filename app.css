@@ -60,6 +60,10 @@ body {
   transition: all 0.3s ease;
 }
 
+.x-mark {
+  display: none;
+}
+
 /* Nav */
 .header__nav .nav-list {
   display: flex;
@@ -71,7 +75,7 @@ body {
 
 .nav-list__link {
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
   font-size: 16px;
   font-weight: 500;
   padding: 8px 12px;
@@ -1728,7 +1732,73 @@ body {
   /* ჰედერის ოპტიმიზაცია */
 
   .burger-con {
+    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
     visibility: visible;
+    z-index: 1001;
+  }
+
+  #language-transform.act {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 99999;
+    position: relative;
+    top: 70px;
+    left: 375px;
+  }
+  .header__logo {
+    z-index: 9999;
+  }
+  .header.shrink {
+    padding: 4px 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header.shrink .header__logo {
+    width: 80px !important;
+    padding: 4px !important;
+    flex-shrink: 0;
+  }
+
+  .header__nav.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* მთელი ეკრანის სიმაღლე */
+    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+    padding: 10px;
+    opacity: 0.7;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-list__link {
+    font-size: 1rem;
+    color: black;
+    padding: 10px 20px;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   .header__container {
     padding: 0 15px;
@@ -2020,7 +2090,73 @@ body {
 /* Medium Mobile/Tablet (480px-767px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .burger-con {
+    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
     visibility: visible;
+    z-index: 1001;
+  }
+
+  #language-transform.act {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 99999;
+    position: relative;
+    top: 70px;
+    left: 210px;
+  }
+  .header__logo {
+    z-index: 9999;
+  }
+  .header.shrink {
+    padding: 4px 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header.shrink .header__logo {
+    width: 80px !important;
+    padding: 4px !important;
+    flex-shrink: 0;
+  }
+
+  .header__nav.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* მთელი ეკრანის სიმაღლე */
+    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+    padding: 10px;
+    opacity: 0.7;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-list__link {
+    font-size: 1rem;
+    color: black;
+    padding: 10px 20px;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   /* Header */
   .header__container {
@@ -2210,7 +2346,73 @@ body {
 /* ✅ მობილური (პატარა ეკრანები) */
 @media (max-width: 479px) {
   .burger-con {
+    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
     visibility: visible;
+    z-index: 1001;
+  }
+
+  #language-transform.act {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 99999;
+    position: relative;
+    top: 70px;
+    left: 170px;
+  }
+  .header__logo {
+    z-index: 9999;
+  }
+  .header.shrink {
+    padding: 4px 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header.shrink .header__logo {
+    width: 80px !important;
+    padding: 4px !important;
+    flex-shrink: 0;
+  }
+
+  .header__nav.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* მთელი ეკრანის სიმაღლე */
+    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+    padding: 10px;
+    opacity: 0.7;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-list__link {
+    font-size: 1rem;
+    color: black;
+    padding: 10px 20px;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   /* Header */
   .header__container {
