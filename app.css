@@ -1539,7 +1539,7 @@ body {
 }
 
 .burger-con {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -1551,7 +1551,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid #ddd;
-  visibility: hidden;
 }
 
 .burger-con:hover {
@@ -1579,6 +1578,9 @@ body {
 
   .header__container {
     max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .hero {
     min-width: 500px;
@@ -2602,5 +2604,10 @@ body {
 
   .info-card__text {
     font-size: 12px;
+  }
+
+  .work__clock {
+    right: 15px;
+    bottom: 10px;
   }
 } /*# sourceMappingURL=app.css.map */
