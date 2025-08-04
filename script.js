@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#clock": "სამუშაო საათები",
       "#clock_description": `
   <p>მოგესალმებით,</p>
-  <p>გმადლობთ, რომ დაგვიკავშირდით.</p> <p> გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება წინასწარი ჩაწერით, ნომერზე: 599 641187. კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.</p>
+  <p>გმადლობთ, რომ  დაგვიკავშირდით.</p> 
+  <p>გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება  წინასწარი ჩაწერით,ნომერზე:+995599-64-11-87.  კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.</p>
   <p>მიღების საათებია ორშაბათიდან პარასკევის ჩათვლით, 10:00–15:00 საათამდე. მისამართი: თევდორე მღვდლის ქუჩა №48, კორპუსი 1ა, ბინა 2.</p>
 `,
 
@@ -146,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         " პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.",
       "#article-card-link-1": " სრულად წაკითხვა",
+      "#add":
+        "⚠️ გთხოვთ გაითვალისწინოთ, შვებულებიდან გამომდინარე, კონსულტაციები აღდგება 15 სექტემბრიდან  წინასწარ ჩასაწერად კი შეგიძლიათ დაგვიკავშირდეთ მითითებულ ნომერზე.",
     },
     en: {
       "#main": "Main",
@@ -200,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#email": "Email",
       "#clock": "Working hours",
       "#clock_description": `<p>Welcome,</p>
-<p>Thank you for contacting us. Please note that patients are seen by prior appointment only, at the following number: 599 641187. Consultations are available in Georgian, English, and Russian languages.</p>
+<p>Thank you for contacting us. Please note that patients are seen by prior appointment only, at the following number: +995 599 641187. Consultations are available in Georgian, English, and Russian languages.</p>
 <p>Reception hours are from Monday to Friday, 10:00 AM – 3:00 PM. Address: 48 Tevdore Mghvdlis Street, Building 1A, Apartment 2.</p>`,
       "#brand-desc":
         "Medical sexology is an interdisciplinary field of modern medicine that studies human sexual health",
@@ -238,6 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         "Professor Zurab Marshania discusses diseases that may develop in women due to gynecological causes.",
       "#article-card-link-1": "Read More",
+      "#add":
+        "⚠️ Please note that due to the holidays, consultations will resume from September 15. To make an appointment in advance, you can contact us at the number provided.",
     },
     ru: {
       "#main": "Главный",
@@ -292,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#email": "почта",
       "#clock": "рабочее время",
       "#clock_description": `<p>Добро пожаловать,</p>
-<p>Благодарим вас за обращение. Пожалуйста, обратите внимание, что приём пациентов осуществляется только по предварительной записи по номеру: 599 641187. Консультации проводятся на грузинском, английском и русском языках.</p>
+<p>Благодарим вас за обращение. Пожалуйста, обратите внимание, что приём пациентов осуществляется только по предварительной записи по номеру: +995 599 641187. Консультации проводятся на грузинском, английском и русском языках.</p>
 <p>Часы приёма: с понедельника по пятницу, с 10:00 до 15:00. Адрес: улица Тевдоре Мгвдли №48, корпус 1А, квартира 2.</p>
 `,
       "#brand-desc":
@@ -332,6 +337,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-excerpt-1":
         "Профессор Зураб Маршания говорит о заболеваниях, которые могут развиваться у женщин по гинекологическим причинам.",
       "#article-card-link-1": "Читать полностью",
+      "#add":
+        "⚠️ Обратите внимание, что в связи с праздниками консультации возобновятся с 15 сентября. Чтобы записаться на прием заранее, вы можете связаться с нами по указанному номеру.",
     },
   };
 
