@@ -1554,7 +1554,7 @@ body {
 }
 
 .burger-con:hover {
-  background-color: #007bff;
+  background-color: #d45a8f;
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
 }
@@ -1745,9 +1745,9 @@ body {
     opacity: 1;
     transition: all 0.3s ease;
     z-index: 99999;
-    position: relative;
-    top: 70px;
-    left: 375px;
+    position: fixed;
+    top: 95px;
+    right: 25px;
   }
   .header__logo {
     z-index: 9999;
@@ -1828,11 +1828,6 @@ body {
   }
 
   .call-box {
-    /* position: relatives !important;
-    margin: 0 !important;
-    top: -550px !important;
-    left: 220px !important;
-    width: 200px !important; */
     display: none !important;
   }
   .call-icon {
@@ -2103,9 +2098,9 @@ body {
     opacity: 1;
     transition: all 0.3s ease;
     z-index: 99999;
-    position: relative;
-    top: 70px;
-    left: 210px;
+    position: fixed;
+    top: 95px;
+    right: 20px;
   }
   .header__logo {
     z-index: 9999;
@@ -2347,6 +2342,9 @@ body {
 }
 /* ✅ მობილური (პატარა ეკრანები) */
 @media (max-width: 479px) {
+  .main {
+    overflow: hidden;
+  }
   .burger-con {
     display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
     visibility: visible;
@@ -2359,9 +2357,9 @@ body {
     opacity: 1;
     transition: all 0.3s ease;
     z-index: 99999;
-    position: relative;
-    top: 70px;
-    left: 170px;
+    position: fixed;
+    top: 95px;
+    right: 20px;
   }
   .header__logo {
     z-index: 9999;

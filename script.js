@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Burger menu toggle
+  //Burger menu toggle
   const burger = document.getElementById("burger");
   const languagetransform = document.getElementById("language-transform");
   const navList = document.getElementById("nav");
