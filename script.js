@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // დეფოლტ ენა - ქართული
   let currentLang = localStorage.getItem("selectedLanguage") || "ge";
   // Loader function
   function hideLoader() {
@@ -11,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 0);
     }
   }
+
+  function showLoader() {
+    const loader = document.getElementById("gender-loader");
+    if (loader) {
+      loader.style.display = "flex";
+      loader.style.opacity = "1";
+    }
+  }
+
+  showLoader();
 
   // Typing animation variables
   const textElement = document.getElementById("typing-text");
@@ -106,8 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#clock": "სამუშაო საათები",
       "#clock_description": `
   <p>მოგესალმებით,</p>
-  <p>გმადლობთ, რომ  დაგვიკავშირდით.</p> 
-  <p>გთხოვთ გაითვალისწინოთ, რომ პაციენტების მიღება სრულდება  წინასწარი ჩაწერით,ნომერზე:+995599-64-11-87.  კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.</p>
+  <p>გმადლობთ, რომ დაგვიკავშირდით.</p> 
+  <p>  გთხოვთ გაითვალისწინოთ,რომ პაციენტების მიღება სრულდება წინასწარი ჩაწერით, ნომერზე: +995 599 64 11 87.  კონსულტაციების ჩატარება ხდება როგორც ქართულ, ინგლისურ ასევე რუსულ ენაზე.</p>
   <p>მიღების საათებია ორშაბათიდან პარასკევის ჩათვლით, 10:00–15:00 საათამდე. მისამართი: თევდორე მღვდლის ქუჩა №48, კორპუსი 1ა, ბინა 2.</p>
 `,
 
@@ -148,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         " პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.",
       "#article-card-link-1": " სრულად წაკითხვა",
       "#add":
-        "⚠️ გთხოვთ გაითვალისწინოთ, შვებულებიდან გამომდინარე, კონსულტაციები აღდგება 15 სექტემბრიდან  წინასწარ ჩასაწერად კი შეგიძლიათ დაგვიკავშირდეთ მითითებულ ნომერზე.",
+        "⚠️  გთხოვთ   გაითვალისწინოთ,     შვებულებიდან   გამომდინარე,   კონსულტაციები   აღდგება  15  სექტემბრიდან,    წინასწარ  ჩასაწერად  კი  შეგიძლიათ  დაგვიკავშირდეთ  მითითებულ ნომერზე.",
     },
     en: {
       "#main": "Main",
@@ -364,7 +373,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const el = document.querySelector(selector);
       if (el) {
-        // თუ ტექსტში HTML ტეგებია, გამოვიყენოთ innerHTML
         if (text.includes("<") || text.includes("&")) {
           el.innerHTML = text;
         } else {
@@ -373,7 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // დამატებით განაახლე clockDisplay ბლოკიც — თუ ღილაკით იძახის
     const clockDisplay = document.getElementById("clockDisplay");
     if (clockDisplay) {
       clockDisplay.innerHTML = `
@@ -382,7 +389,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     }
 
-    // განაახლე currentLang ცვლადიც, თუ გაქვს სადმე გამოყენებული
     window.currentLang = langCode;
   }
 
@@ -497,29 +503,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Work hours show/hide
-  // სამუშაო საათების ჩვენება
   window.showClockDetails = function () {
     const clock = document.getElementById("clockDisplay");
     if (clock) {
       clock.style.display = "block";
 
-      // გარეთ დაკლიკების დამჭერი
       setTimeout(() => {
         document.addEventListener("click", handleOutsideClick);
       }, 0);
     }
   };
 
-  // დამალვა
   window.hideClockDetails = function () {
     const clock = document.getElementById("clockDisplay");
     if (clock) clock.style.display = "none";
 
-    // მოვაშოროთ click event როცა დაიმალა
     document.removeEventListener("click", handleOutsideClick);
   };
 
-  // გარეთ დაკლიკების შემოწმება
   function handleOutsideClick(event) {
     const clockBlock = document.getElementById("work-clock");
     if (clockBlock && !clockBlock.contains(event.target)) {
@@ -591,29 +592,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Start typing animation
   type();
 
-  // Hide loader immediately
   setTimeout(hideLoader, 1000);
 });
 
-// მოვძებნოთ ღილაკი
 const scrollBtn = document.getElementById("scrollToTopBtn");
 
-// როცა იუზერი სქროლავს
 window.onscroll = function () {
   if (document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = "block"; // გამოჩნდეს
+    scrollBtn.style.display = "block";
   } else {
-    scrollBtn.style.display = "none"; // დაიმალოს
+    scrollBtn.style.display = "none";
   }
 };
 
-// დაჭერისას ასქროლოს ზემოთ
 scrollBtn.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // რბილად ასქროლოს
+    behavior: "smooth",
   });
 });

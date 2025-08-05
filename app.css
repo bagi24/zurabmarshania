@@ -171,8 +171,8 @@ body {
 
 .main__container {
   width: 100%;
-  min-height: 700px; /* მინიმალური სიმაღლე */
-  height: 100vh; /* მთელი ეკრანის სიმაღლე */
+  min-height: 700px;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1242,7 +1242,6 @@ body {
   opacity: 1;
 }
 
-/*ვიდეო ინტერვიუები */
 .interviews-section {
   padding: 40px 20px;
   background: linear-gradient(145deg, #f9f9f9, #eaeaea);
@@ -1474,7 +1473,6 @@ body {
   padding-left: 30px;
 }
 
-/* მოძრაობის ანიმაცია */
 @keyframes scroll-text {
   0% {
     transform: translateX(-100%);
@@ -1491,7 +1489,7 @@ body {
     transform: translateX(100%);
   }
 }
-/* სტილები ღილაკისთვის */
+
 #scrollToTopBtn {
   position: fixed;
   bottom: 100px;
@@ -1505,7 +1503,7 @@ body {
   text-align: center;
   line-height: 50px;
   cursor: pointer;
-  display: none; /* თავიდან არ ჩანს */
+  display: none;
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
@@ -1544,7 +1542,7 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #ffffffcc; /* ნახევრად გამჭვირვალე თეთრი */
+  background-color: #ffffffcc;
   backdrop-filter: blur(10px);
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1611,7 +1609,7 @@ body {
   }
 }
 /* ✅ ლეპტოპები */
-/* ✅ ლეპტოპები */
+
 @media (min-width: 1024px) and (max-width: 1279px) {
   /* Standard laptops */
   .header__container {
@@ -1728,13 +1726,13 @@ body {
     font-size: 0.9rem;
   }
 }
-/* ✅ ტაბლეტები ჰორიზონტალურად */
-/* ✅ ტაბლეტები ჰორიზონტალურად */
+/* ✅  */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   /* ჰედერის ოპტიმიზაცია */
 
   .burger-con {
-    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
+    display: flex;
     visibility: visible;
     z-index: 1001;
   }
@@ -1769,15 +1767,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* მთელი ეკრანის სიმაღლე */
-    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    height: auto;
+    background: rgba(99, 171, 219, 0.98);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     animation: slideDown 0.3s ease-out;
     padding: 10px;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .nav-list {
@@ -1882,7 +1880,6 @@ body {
     transform: translateX(-50%);
   }
 
-  /* სერვისების სექცია */
   .services-container {
     flex-wrap: wrap;
     justify-content: center;
@@ -1896,7 +1893,6 @@ body {
     padding: 20px;
   }
 
-  /* წიგნების პრომო */
   .book-card {
     flex-direction: column;
     max-width: 100%;
@@ -1907,7 +1903,6 @@ body {
     height: 250px;
   }
 
-  /* დამატებითი ელემენტები */
   .call-box {
     position: relative;
     width: 260px;
@@ -1939,17 +1934,17 @@ body {
   }
 
   .footer {
-    padding: 2rem 0 1.5rem; /* ზედა 2rem, ქვედა 1.5rem */
+    padding: 2rem 0 1.5rem;
   }
 
   .footer__container {
-    grid-template-columns: 1fr 1fr; /* 2 სვეტი */
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     padding: 0 1rem;
   }
 
   .brand-info {
-    grid-column: span 2; /* ბრენდის ინფო მთელ სიგანეზე */
+    grid-column: span 2;
     text-align: center;
     margin-bottom: 0.5rem;
   }
@@ -2071,7 +2066,6 @@ body {
     font-size: 0.85rem;
   }
 
-  /* English text specific adjustments */
   #book2_title {
     font-size: 1rem;
     line-height: 1.3;
@@ -2083,11 +2077,11 @@ body {
     line-clamp: 6;
   }
 }
-/* ✅ ტაბლეტები ვერტიკალურად და პატარა მობილურები */
+/* ✅ */
 /* Medium Mobile/Tablet (480px-767px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .burger-con {
-    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
+    display: flex;
     visibility: visible;
     z-index: 1001;
   }
@@ -2122,15 +2116,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* მთელი ეკრანის სიმაღლე */
-    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    height: auto;
+    background: rgba(99, 171, 219, 0.98);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     animation: slideDown 0.3s ease-out;
     padding: 10px;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .nav-list {
@@ -2231,6 +2225,11 @@ body {
 
   .call-text {
     font-size: 11px;
+
+    text-align: justify !important;
+    hyphens: auto !important;
+    -webkit-hyphens: auto !important;
+    -ms-hyphens: auto !important;
   }
 
   /* Call Text Addition */
@@ -2330,7 +2329,6 @@ body {
     text-align: center;
   }
 
-  /* Scroll to Top Button */
   #scrollToTopBtn {
     width: 45px;
     height: 45px;
@@ -2340,13 +2338,13 @@ body {
     right: 20px;
   }
 }
-/* ✅ მობილური (პატარა ეკრანები) */
+/* ✅ მობილური  */
 @media (max-width: 479px) {
   .main {
     overflow: hidden;
   }
   .burger-con {
-    display: flex; /* ჩანს მხოლოდ პატარა ეკრანებზე */
+    display: flex;
     visibility: visible;
     z-index: 1001;
   }
@@ -2381,15 +2379,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* მთელი ეკრანის სიმაღლე */
-    background: rgba(99, 171, 219, 0.98); /* გამჭვირვალე ლურჯი ფონი */
+    height: auto;
+    background: rgba(99, 171, 219, 0.98);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     animation: slideDown 0.3s ease-out;
     padding: 10px;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .nav-list {
