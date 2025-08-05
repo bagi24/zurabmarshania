@@ -2076,6 +2076,16 @@ body {
     -webkit-line-clamp: 6;
     line-clamp: 6;
   }
+  .brand-info__description {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+
+    line-height: 1.5;
+  }
+  .brand-info__logo {
+    align-self: baseline;
+  }
 }
 /* ✅ */
 /* Medium Mobile/Tablet (480px-767px) */
@@ -2326,7 +2336,7 @@ body {
 
   .brand-info__description {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   #scrollToTopBtn {
@@ -2336,6 +2346,17 @@ body {
     line-height: 45px;
     bottom: 90px;
     right: 20px;
+  }
+
+  .brand-info__description {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+
+    line-height: 1.5;
+  }
+  .brand-info__logo {
+    align-self: baseline;
   }
 }
 /* ✅ მობილური  */
@@ -2605,5 +2626,16 @@ body {
   .work__clock {
     right: 15px;
     bottom: 10px;
+  }
+
+  .brand-info__description {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+
+    line-height: 1.5;
+  }
+  .brand-info__logo {
+    align-self: baseline;
   }
 } /*# sourceMappingURL=app.css.map */
