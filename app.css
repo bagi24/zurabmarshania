@@ -1573,7 +1573,10 @@ body {
 /* ✅ სტანდარტული Desktop */
 @media (min-width: 1280px) and (max-width: 1919px) {
   /* Large desktops, full HD */
-
+  #book2_title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
   .header__container {
     max-width: 1200px;
     display: flex;
@@ -1615,6 +1618,11 @@ body {
   .header__container {
     max-width: 980px;
     padding: 0 20px;
+  }
+
+  #book2_title {
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
   .header__logo {
