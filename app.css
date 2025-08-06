@@ -632,7 +632,7 @@ body {
 .footer__contact {
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
 }
 
@@ -1523,7 +1523,7 @@ body {
   margin-top: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 260px;
+  max-width: 260px !important;
   height: auto;
   position: absolute;
   top: 180px;
@@ -2632,10 +2632,25 @@ body {
   }
 
   .work__clock {
-    right: 15px;
+    right: 0;
     bottom: 10px;
   }
+  .work__clock-state {
+    width: 90%;
+    padding: 8px 10px;
+    border-radius: 100px;
+  }
 
+  .work__clock-display {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 5px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
   .brand-info__description {
     width: 100%;
     text-align: justify;

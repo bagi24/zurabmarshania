@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#bio_subtitle":
         "ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი",
       "#bio_text":
-        'ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine) აფილირებული ეროვნული საზოგადოების (National Associated Society) - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988 წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას (პაციენტების ამბულატორიულ მიღებას) აგრძელებს "ზურაბ მარშანიას სამედიცინო სექსოლოგიის კაბინეტში"; ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში, პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში. ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.',
+        'ზურაბ მარშანია - ექიმი სექსოლოგი, მედიცინის აკადემიური დოქტორი, საქართველოს ეროვნული უნივერსიტეტი - სეუ-ს მედიცინის ფაკულტეტის სექსოლოგიის სრული პროფესორი, ევროპის სამედიცინო სექსოლოგიის საზოგადოებასთან (European Society for Sexual Medicine) აფილირებული ეროვნული საზოგადოების (National Affiliated  Society) - საქართველოს სამედიცინო სექსოლოგიის საზოგადოების პრეზიდენტი, საქართველოს საბუნებისმეყველო მეცნიერებათა აკადემიის ნამდვილი წევრი. სექსოლოგ - კლინიცისტად მუშაობა დაიწყო 1988 წელს ი.ჟორდანიას სახ. სამეცნიერო კვლევით ინსტიტუტში. ამჟამად კლინიკურ პრაქტიკას (პაციენტების ამბულატორიულ მიღებას) აგრძელებს "ზურაბ მარშანიას სამედიცინო სექსოლოგიის კაბინეტში"; ზურაბ მარშანიამ საქართველოში, აშშ-ში, ესპანეთში, პორტუგალიაში, თურქეთში, შვედეთში, დანიაში, ესტონეთში და უკრაინაში გამოაქვეყნა მრავალი ათეული სამეცნიერო ნაშრომი და გააკეთა მოხსენებები საერთაშორისო კონფერენციებზე, ხოლო ქალისა და მამაკაცის სექსუალური დისფუნქციების საკითხებზე საჯარო ლექციების წასაკითხად, მიწვეული იყო ჩეხეთის, უნგრეთისა და სლოვენიის რესპუბლიკებში. ზ.მარშანია პოლიტიკურ მეცნიერებათა დოქტორიცაა, 1998 წელს მინიჭებული აქვს საგანგებო და სრულუფლებიანი დესპანის დიპლომატიური რანგი და წლების განმავლობაში ხელმძღვანელობდა საქართველოს დიპლომატიურ მისიებს ბალტიის ქვეყნებსა და უკრაინაში.',
       "#articles_title": "სტატიები",
       "#article1_title": "სექსუალური განათლების მნიშვნელობა",
       "#article1_excerpt":
@@ -128,16 +128,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "#contact2": "კონტაქტი",
       "#srulad": "სრულად ნახვა",
       "#serve-title": "სერვისები",
-      "#man-category-title": "მამაკაცის სქესობრივი დისფნუქცია",
-      "#man-category-title-1": "ერექციული დისფუნქია",
+      "#man-category-title": "მამაკაცის სექსუალური დისფუნქცია",
+      "#man-category-title-1": "ერექციული დისფუნქცია",
       "#man-category-title-2": "ნაადრევი ეაკულაცია",
       "#man-category-title-3": "ეაკულაციის გაძნელება",
       "#man-category-title-4": "ლიბიდოს დაქვეითება",
-      "#woman-category-title": "ქალის სქესობრივი დისფუნქცია",
+      "#woman-category-title": "ქალის სექსუალური დისფუნქცია",
       "#woman-category-title-1": "ვაგინიზმი",
       "#woman-category-title-2": "ანორგაზმია",
       "#woman-category-title-3": "ლიბიდოს დაქვეითება",
-      "#woman-category-title-4": "აგზნებადობის დაქვეითება",
+      "#woman-category-title-4": "სექსუალური აგზნებადობის დაქვეითება",
       "#other-category-title": "სხვა სერვისები",
       "#other-category-title-1": "ფსიქოლოგია",
       "#other-category-title-2": "ფსიქიატრია",
@@ -157,7 +157,9 @@ document.addEventListener("DOMContentLoaded", function () {
         " პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.",
       "#article-card-link-1": " სრულად წაკითხვა",
       "#add":
-        "⚠️  გთხოვთ   გაითვალისწინოთ,     შვებულებიდან   გამომდინარე,   კონსულტაციები   აღდგება  15  სექტემბრიდან,    წინასწარ  ჩასაწერად  კი  შეგიძლიათ  დაგვიკავშირდეთ  მითითებულ ნომერზე.",
+        "⚠️გთხოვთ   გაითვალისწინოთ,     შვებულებიდან   გამომდინარე,   კონსულტაციები   აღდგება  15  სექტემბრიდან,    წინასწარ  ჩასაწერად  კი  შეგიძლიათ  დაგვიკავშირდეთ  მითითებულ ნომერზე.",
+      "#contacti": "კონტაქტი",
+      "#links": "ბმულები",
     },
     en: {
       "#main": "Main",
@@ -183,9 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#book2_author": "Zurab Marshania",
       "#book2_description":
         "The book provides unique, comprehensive basic knowledge of clinical sexology, which is absolutely necessary for both medical students and doctors of various specialties.",
-      "#bio_title": "Short Biography",
-      "#bio_subtitle":
-        "Zurab Marshania - Sexologist, Academic Doctor of Medicine",
+      "#bio_title": "Brief Biography",
+      "#bio_subtitle": "Zurab Marshania - Sexologist, MD, PhD",
       "#bio_text":
         "Zurab Marshania, clinician - sexologist, MD, PhD, Full Professor of Sexology at the Faculty of Medicine of the Georgian National University - SEU, President of the Georgian Society of Medical Sexology, an affiliated national society with the European Society for Medical Sexology (ESSM), a full member of the Georgian Academy of Natural Sciences. He has been working as a clinician-sexologist since 1988 (he headed the andrology department at the I. Zhordania Scientific Research Institute). Currently, he continues his clinical practice (Outpatient appointment) at the Zurab Marshania Sexual Medicine Office; Zurab Marshania has published lots of scientific papers and gives presentations at international conferences in Georgia, and in the USA, Spain, Portugal, Turkey, Sweden, Denmark, Estonia and Ukraine, and has been invited to give public lectures on male and female sexual dysfunction in the Czech Republic, Hungary and Slovenia. Z. Marshania also holds a doctorate in political science, was awarded the diplomatic rank of Envoy Extraordinary and Plenipotentiary in 1998 and headed Georgia&#39;s diplomatic missions in the Baltic States and Ukraine for several years.",
       "#articles_title": "Articles",
@@ -215,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>Thank you for contacting us. Please note that patients are seen by prior appointment only, at the following number: +995 599 641187. Consultations are available in Georgian, English, and Russian languages.</p>
 <p>Reception hours are from Monday to Friday, 10:00 AM – 3:00 PM. Address: 48 Tevdore Mghvdlis Street, Building 1A, Apartment 2.</p>`,
       "#brand-desc":
-        "Medical sexology is an interdisciplinary field of modern medicine that studies human sexual health",
+        "Sexual Medicine is an interdisciplinary field of modern medicine that studies human sexual health",
       "#item-adress": "48 Tevdore Mghvdeli Street",
       "#main2": "main",
       "#bio2": "biography",
@@ -231,14 +232,14 @@ document.addEventListener("DOMContentLoaded", function () {
       "#woman-category-title-1": "Vaginismus",
       "#woman-category-title-2": "Anorgasmia",
       "#woman-category-title-3": "Low Libido",
-      "#woman-category-title-4": "Reduced Arousal",
+      "#woman-category-title-4": "Sexual arousal disorder",
       "#other-category-title": "Other Services",
       "#other-category-title-1": "Psychology",
       "#other-category-title-2": "Psychiatry",
       "#other-category-title-3": "Gynecology",
       "#other-category-title-4": "Ultrasound",
       "#other-category-title-5": "Cardiology",
-      "#other-category-title-6": "Laboratory Testing",
+      "#other-category-title-6": "Lab Test",
       "#interviews-title": "🎥 Video Interviews",
       "#articles-title": "📰 Articles",
       "#article-card-title": "When a person doesn’t have harmonious sex...",
@@ -252,6 +253,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "#article-card-link-1": "Read More",
       "#add":
         "⚠️ Please note that due to the holidays, consultations will resume from September 15. To make an appointment in advance, you can contact us at the number provided.",
+      "#contacti": "Contact",
+      "#links": "Links",
     },
     ru: {
       "#main": "Главный",
@@ -298,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "#contact_phone_text": "+995 599 12 34 56",
       "#contact_call_text": "Свяжитесь с нами для записи на прием",
       "#hero__subtitle_static": "Профессор",
-      wordList: ["Сексолог", "Исследователь"],
+      wordList: ["Доктор Сексолог", "Исследователь"],
       "#hero__button": "Подробно",
       "#books-promo__title": "Авторское издание",
       "#buy_button2": "Купить",
@@ -324,9 +327,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "#man-category-title-4": "Снижение либидо",
       "#woman-category-title": "Сексуальная дисфункция у женщин",
       "#woman-category-title-1": "Вагинизм",
-      "#woman-category-title-2": "Аногазмия",
+      "#woman-category-title-2": "Аноргазмия",
       "#woman-category-title-3": "Снижение либидо",
-      "#woman-category-title-4": "Снижение возбуждения",
+      "#woman-category-title-4": "Снижение сексуального возбуждения",
       "#other-category-title": "Другие услуги",
       "#other-category-title-1": "Психология",
       "#other-category-title-2": "Психиатрия",
@@ -347,7 +350,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "Профессор Зураб Маршания говорит о заболеваниях, которые могут развиваться у женщин по гинекологическим причинам.",
       "#article-card-link-1": "Читать полностью",
       "#add":
-        "⚠️ Обратите внимание, что в связи с праздниками консультации возобновятся с 15 сентября. Чтобы записаться на прием заранее, вы можете связаться с нами по указанному номеру.",
+        "⚠️      Обратите внимание,  что   связи    с    праздниками консультации    возобновятся с 15 сентября.  Чтобы  записаться  на  прием  заранее,  вы можете связаться с нами по   указанному номеру.",
+      "#contacti": "Контакт",
+      "#links": "Cсылки",
     },
   };
 
