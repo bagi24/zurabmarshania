@@ -2757,6 +2757,7 @@ body {
     bottom: 10px;
   }
   .work__clock-state {
+    width: 88%;
     padding: 8px 12px;
     border-radius: 8px;
   }
