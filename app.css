@@ -1842,11 +1842,13 @@ body {
     animation: slideDown 0.3s ease-out;
     padding: 10px;
     opacity: 1;
+    padding: 30px;
   }
 
   .nav-list {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px !important;
     text-align: center;
   }
 
@@ -2228,13 +2230,13 @@ body {
     justify-content: center;
     z-index: 1000;
     animation: slideDown 0.3s ease-out;
-    padding: 10px;
+    padding: 30px;
     opacity: 1;
   }
 
   .nav-list {
     flex-direction: column;
-    gap: 20px;
+    gap: 20px !important;
     text-align: center;
   }
 
@@ -2531,13 +2533,13 @@ body {
     justify-content: center;
     z-index: 1000;
     animation: slideDown 0.3s ease-out;
-    padding: 10px;
+    padding: 30px;
     opacity: 1;
   }
 
   .nav-list {
     flex-direction: column;
-    gap: 20px;
+    gap: 20px !important;
     text-align: center;
   }
 
