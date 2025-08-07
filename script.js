@@ -1,20 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   let currentLang = localStorage.getItem("selectedLanguage") || "ge";
   // Loader function
-  function showLoader() {
-    const loader = document.getElementById("gender-loader");
-    if (loader) {
-      document.body.classList.add("loading");
-      loader.style.display = "flex";
-      loader.style.opacity = "1";
-    }
-  }
-
   function hideLoader() {
     const loader = document.getElementById("gender-loader");
     if (loader) {
-      document.body.classList.remove("loading");
-      document.body.classList.add("loaded");
       loader.style.opacity = "0";
       setTimeout(() => {
         loader.style.display = "none";
@@ -22,8 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function showLoader() {
+    const loader = document.getElementById("gender-loader");
+    if (loader) {
+      loader.style.display = "flex";
+      loader.style.opacity = "1";
+    }
+  }
+
+  showLoader();
+  // Function to check if all images are loaded
   function checkAllImagesLoaded() {
-    const images = Array.from(document.querySelectorAll("img"));
+    const images = document.querySelectorAll("img");
+    let loadedCount = 0;
     const totalImages = images.length;
 
     if (totalImages === 0) {
@@ -31,29 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let loadedCount = 0;
-
     images.forEach((img) => {
       if (img.complete) {
         loadedCount++;
       } else {
-        img.addEventListener("load", imageLoaded);
-        img.addEventListener("error", imageLoaded);
+        img.addEventListener("load", () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            hideLoader();
+          }
+        });
+        img.addEventListener("error", () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            hideLoader();
+          }
+        });
       }
     });
 
     if (loadedCount === totalImages) {
       hideLoader();
-    }
-
-    function imageLoaded() {
-      loadedCount++;
-      if (loadedCount === totalImages) {
-        hideLoader();
-      }
-
-      this.removeEventListener("load", imageLoaded);
-      this.removeEventListener("error", imageLoaded);
     }
   }
 

@@ -13,21 +13,6 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-/* დავრწმუნდეთ, რომ სურათები თავდაპირველად ჩანს */
-img {
-  opacity: 1; /* ან არაფერი, თუ default-ად 1-ია */
-  transition: opacity 0.5s ease;
-}
-
-/* მხოლოდ ლოადერის დროს იყოს გაუჩინარებული */
-body.loading img {
-  opacity: 0;
-}
-
-/* ლოადერის მოხსნის შემდეგ */
-body.loaded img {
-  opacity: 1;
-}
 /* Header*/
 .header {
   background: white;
