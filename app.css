@@ -2757,9 +2757,8 @@ body {
     bottom: 10px;
   }
   .work__clock-state {
-    width: 85%;
-    padding: 8px 8px;
-    border-radius: inherit;
+    padding: 8px 12px;
+    border-radius: 8px;
   }
 
   .work__clock-display {
@@ -2810,5 +2809,9 @@ body {
     font-size: 36px;
     color: #63abdb;
     animation: pulse 1.2s ease-in-out infinite;
+  }
+
+  .media-icons {
+    top: 40%;
   }
 } /*# sourceMappingURL=app.css.map */
