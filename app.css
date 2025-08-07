@@ -2757,10 +2757,9 @@ body {
     bottom: 10px;
   }
   .work__clock-state {
-    width: 90%;
+    width: 85%;
     padding: 8px 8px;
-
-    border-radius: 100px;
+    border-radius: inherit;
   }
 
   .work__clock-display {
