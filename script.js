@@ -551,10 +551,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (clock) {
       clock.style.display = "block";
 
-      if (workClock) {
-        workClock.classList.remove("scrolled");
-      }
-
       setTimeout(() => {
         document.addEventListener("click", handleOutsideClick);
       }, 0);
@@ -662,14 +658,14 @@ scrollBtn.addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", function () {
-  const clock = document.querySelector(".work__clock");
+  const clock = document.querySelector(".work__clock-state");
   const scrollBtn = document.getElementById("scrollToTopBtn");
 
   if (window.scrollY > 4120) {
-    clock.classList.add("scrolled");
-    scrollBtn.classList.add("scrolled");
+    clock.classList.add("scrolledd");
+    scrollBtn.classList.add("scrolledd");
   } else {
-    clock.classList.remove("scrolled");
-    scrollBtn.classList.remove("scrolled");
+    scrollBtn.classList.remove("scrolledd");
+    clock.classList.remove("scrolledd");
   }
 });
