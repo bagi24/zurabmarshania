@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loader.style.opacity = "0";
       setTimeout(() => {
         loader.style.display = "none";
-      }, 0);
+      }, 500);
     }
   }
 
@@ -20,7 +20,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showLoader();
+  // Function to check if all images are loaded
+  function checkAllImagesLoaded() {
+    const images = document.querySelectorAll("img");
+    let loadedCount = 0;
+    const totalImages = images.length;
 
+    if (totalImages === 0) {
+      hideLoader();
+      return;
+    }
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.addEventListener("load", () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            hideLoader();
+          }
+        });
+        img.addEventListener("error", () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            hideLoader();
+          }
+        });
+      }
+    });
+
+    if (loadedCount === totalImages) {
+      hideLoader();
+    }
+  }
+
+  // Start checking for images after DOM is loaded
+  setTimeout(checkAllImagesLoaded, 100);
   // Typing animation variables
   const textElement = document.getElementById("typing-text");
   let wordList = ["ექიმი სექსოლოგი", "მკვლევარი"];

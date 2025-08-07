@@ -1610,6 +1610,35 @@ body {
     max-width: 200px;
     right: -120px;
   }
+  .gender-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gender-ring {
+    width: 100px;
+    height: 100px;
+    border: 6px solid #63abdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  .gender-icon {
+    font-size: 36px;
+    color: #63abdb;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
 }
 /* ✅ ლეპტოპები */
 
@@ -1732,6 +1761,35 @@ body {
   .details-button {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+  .gender-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gender-ring {
+    width: 100px;
+    height: 100px;
+    border: 6px solid #63abdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  .gender-icon {
+    font-size: 36px;
+    color: #63abdb;
+    animation: pulse 1.2s ease-in-out infinite;
   }
 }
 /* ✅  */
@@ -2094,6 +2152,35 @@ body {
   .brand-info__logo {
     align-self: baseline;
   }
+  .gender-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gender-ring {
+    width: 100px;
+    height: 100px;
+    border: 6px solid #63abdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  .gender-icon {
+    font-size: 36px;
+    color: #63abdb;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
 }
 /* ✅ */
 /* Medium Mobile/Tablet (480px-767px) */
@@ -2365,6 +2452,35 @@ body {
   }
   .brand-info__logo {
     align-self: baseline;
+  }
+  .gender-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gender-ring {
+    width: 100px;
+    height: 100px;
+    border: 6px solid #63abdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  .gender-icon {
+    font-size: 36px;
+    color: #63abdb;
+    animation: pulse 1.2s ease-in-out infinite;
   }
 }
 /* ✅ მობილური  */
@@ -2660,5 +2776,34 @@ body {
   }
   .brand-info__logo {
     align-self: baseline;
+  }
+  .gender-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .gender-ring {
+    width: 100px;
+    height: 100px;
+    border: 6px solid #63abdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  .gender-icon {
+    font-size: 36px;
+    color: #63abdb;
+    animation: pulse 1.2s ease-in-out infinite;
   }
 } /*# sourceMappingURL=app.css.map */
