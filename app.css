@@ -12,7 +12,13 @@ body {
   box-sizing: border-box;
   font-family: "Helvetica Neue", sans-serif;
 }
-
+.work__clock.scrolled {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+.scrolled {
+  border: 1px solid white;
+}
 /* Header*/
 .header {
   background: white;

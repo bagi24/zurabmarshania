@@ -547,8 +547,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Work hours show/hide
   window.showClockDetails = function () {
     const clock = document.getElementById("clockDisplay");
+    const workClock = document.querySelector(".work__clock");
     if (clock) {
       clock.style.display = "block";
+
+      if (workClock) {
+        workClock.classList.remove("scrolled");
+      }
 
       setTimeout(() => {
         document.addEventListener("click", handleOutsideClick);
@@ -654,4 +659,17 @@ scrollBtn.addEventListener("click", function () {
     top: 0,
     behavior: "smooth",
   });
+});
+
+window.addEventListener("scroll", function () {
+  const clock = document.querySelector(".work__clock");
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  if (window.scrollY > 4120) {
+    clock.classList.add("scrolled");
+    scrollBtn.classList.add("scrolled");
+  } else {
+    clock.classList.remove("scrolled");
+    scrollBtn.classList.remove("scrolled");
+  }
 });
