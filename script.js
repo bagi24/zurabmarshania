@@ -669,3 +669,188 @@ window.addEventListener("scroll", function () {
     clock.classList.remove("scrolledd");
   }
 });
+
+//Daynamiclly ADDed BOOKS
+
+const books = [
+  {
+    id: "book1",
+    title: "სამედიცინო სექსოლოგიისა და ფსიქოსექსოლოგიის საფუძვლები",
+    author: "ზურაბ მარშანია",
+    description:
+      "წიგნი, რომელიც ყოველმხრივ აშუქებს ადამიანის სექსუალური ჯანმრთელობის საკითხებს.",
+    images: ["img/book-2.jpeg", "img/book-21.jpeg"],
+    badge: { text: "ბესტსელერი", class: "book-badge" },
+    link: "http://laterna.ge/?cat=79&show=14032",
+  },
+  {
+    id: "book2",
+    title: "Sexual Medicine from the point of view of a clinician-sexologist",
+    author: "ზურაბ მარშანია",
+    description:
+      "წიგნი გვაწვდის უნიკალურ, ამომწურავ საბაზისო ცოდნას კლინიკური სექსოლოგიის სფეროში...",
+    images: ["img/book-1.jpeg", "img/book-12.jpeg"],
+    badge: { text: "ახალი", class: "book-badge book-badge--new" },
+    link: "http://laterna.ge/?cat=358&show=36213&lang=geo",
+  },
+];
+
+function renderBooks(books) {
+  const container = document.getElementById("books-container");
+  container.innerHTML = ""; // გავასუფთავოთ
+
+  books.forEach((book) => {
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("book-card");
+
+    bookCard.innerHTML = `
+      <div class="book-cover">
+        ${book.images
+          .map(
+            (img) =>
+              `<img src="${img}" alt="${book.title}" loading="lazy" class="book-image" />`
+          )
+          .join("")}
+        <div class="${book.badge.class}" id="${book.id}_badge">${
+      book.badge.text
+    }</div>
+      </div>
+      <div class="book-info">
+        <h3 class="book-title" id="${book.id}_title">${book.title}</h3>
+        <p class="book-author" id="${book.id}_author">${book.author}</p>
+        <p class="book-description" id="${book.id}_description">${
+      book.description
+    }</p>
+        <div class="book-actions">
+          <a href="${book.link}" class="buy-button" id="buy_${
+      book.id
+    }">ყიდვა</a>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(bookCard);
+  });
+}
+
+// გამოძახება
+renderBooks(books);
+
+//Daynamiclly Video Interviews
+const interviews = [
+  {
+    id: "int1",
+    url: "https://www.youtube.com/embed/IHopc_GFzLk",
+    title: "Interview 1",
+  },
+  {
+    id: "int2",
+    url: "https://www.youtube.com/embed/6YB9MlWvKMI",
+    title: "Interview 2",
+  },
+  {
+    id: "int3",
+    url: "https://www.youtube.com/embed/O_ayc8xK3YE",
+    title: "Interview 3",
+  },
+  {
+    id: "int4",
+    url: "https://www.youtube.com/embed/1LPR4p454D8",
+    title: "Interview 4",
+  },
+  {
+    id: "int5",
+    url: "https://www.youtube.com/embed/Egp6t54rkuI",
+    title: "Interview 5",
+  },
+];
+
+function renderInterviews(interviews) {
+  const container = document.getElementById("interviews-container");
+  container.innerHTML = ""; // გასუფთავება
+
+  interviews.forEach((interview) => {
+    const card = document.createElement("div");
+    card.classList.add("interview-card");
+
+    card.innerHTML = `
+      <iframe
+        loading="lazy"
+        src="${interview.url}"
+        title="${interview.title}"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// გამოძახება
+renderInterviews(interviews);
+
+//Daynamiclly articles (სტატიები)
+
+const articles = [
+  {
+    id: "art1",
+    image:
+      "https://www.allnews.ge/media/uploads/2022/11-01/sexproblems-1667302171.jpg",
+    alt: "სტატია ჰარმონიული სექსი 1",
+    title: "როდესაც ადამიანს არ აქვს ჰარმონიული სექსი...",
+    excerpt:
+      "სექსოლოგი ზურაბ მარშანია ლიბიდოს დაქვეითებაზე — როგორ მოქმედებს ჰარმონიული სექსუალური ცხოვრება ადამიანზე.",
+    link: "https://www.ambebi.ge/article/238376-rodesac-adamians-ar-akvs-harmoniuli-seksi-is-ar-aris-bednieri-da-borotdeba-seksologi-zurab-marshania-libidos-dakveitebaze/",
+  },
+  {
+    id: "art2",
+    image:
+      "https://server5.intermedia.ge/article_images/small/201902/201902110658116227.jpg",
+    alt: "სტატია სექსი და დაავადებები 2",
+    title: "არსებობს მთელი რიგი დაავადებები, რომლებიც ემართებათ ქალებს",
+    excerpt:
+      "პროფესორი ზურაბ მარშანია საუბრობს იმ დაავადებებზე, რომლებიც შეიძლება ქალებში განვითარდეს გინეკოლოგიურ საფუძველზე.",
+    link: "https://www.ambebi.ge/article/298644-aris-mteli-rigi-daavadebebi-romlebic-emarteba-ka/",
+  },
+];
+
+function renderArticles(articles) {
+  const container = document.getElementById("articles-container");
+  container.innerHTML = "";
+
+  articles.forEach((article) => {
+    const card = document.createElement("article");
+    card.classList.add("text-article-card");
+
+    card.innerHTML = `
+      <img
+        src="${article.image}"
+        alt="${article.alt}"
+        class="text-article-card__image"
+        loading="lazy"
+      />
+      <div class="text-article-card__content">
+        <h3 class="text-article-card__title" id="${article.id}_title">
+          ${article.title}
+        </h3>
+        <p class="text-article-card__excerpt" id="${article.id}_excerpt">
+          ${article.excerpt}
+        </p>
+        <a
+          href="${article.link}"
+          class="text-article-card__link"
+          target="_blank"
+          id="${article.id}_link"
+        >
+          სრულად წაკითხვა
+        </a>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// გამოძახება
+renderArticles(articles);
