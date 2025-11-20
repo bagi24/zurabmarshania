@@ -1,15 +1,16 @@
-name: Cypress Tests + Deploy to GitHub Pages
+# .github/workflows/cypress-deploy.yml
+name: Test & Deploy
 
+# მხოლოდ main-ზე push-ისას ირთვება
 on:
   push:
     branches: [main]
-  pull_request:
 
 jobs:
-  cypress-and-deploy:
+  test-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -21,18 +22,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # ახალი ნაბიჯი — ჩართავს სერვერს და გაუშვებს Cypress-ს
-      - name: Run Cypress tests
+      # აქ ხდება ზუსტად ის, რაც ლოკალურად გიჩვენია — ფანჯარა + ვიდეო
+      - name: Run Cypress tests (headed + video)
         uses: cypress-io/github-action@v6
         with:
-          start: npm run serve # ან npx serve . ან npx http-server
+          headed: true # ← ხილული ბრაუზერი (ისე როგორც შენს ფოტოზე)
+          browser: chrome
+          start: npx http-server . -p 5500
           wait-on: http://localhost:5500
           wait-on-timeout: 120
 
-      # Deploy მხოლოდ თუ ტესტები გავიდა
+      # დეპლოი მხოლოდ თუ ტესტები გავიდა
       - name: Deploy to GitHub Pages
-        if: success() && github.ref == 'refs/heads/main'
+        if: success()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
+          force_orphan: true
