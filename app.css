@@ -2691,7 +2691,6 @@ body {
   }
 
   .service-category {
-    
     height: auto;
     padding: 20px;
   }
@@ -2816,3 +2815,8 @@ body {
     top: 40%;
   }
 } /*# sourceMappingURL=app.css.map */
+
+.satesto {
+  background-color: red;
+  padding: 30px;
+}
