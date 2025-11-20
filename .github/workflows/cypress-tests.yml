@@ -2,8 +2,7 @@ name: Cypress Tests + Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
 
 jobs:
@@ -22,15 +21,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 1. Cypress ტესტები
+      # ახალი ნაბიჯი — ჩართავს სერვერს და გაუშვებს Cypress-ს
       - name: Run Cypress tests
-        run: npx cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run serve # ან npx serve . ან npx http-server
+          wait-on: http://localhost:5500
+          wait-on-timeout: 120
 
-      # 2. Deploy GitHub Pages-ზე (მხოლოდ main branch-ზე push-ისას)
+      # Deploy მხოლოდ თუ ტესტები გავიდა
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: success() && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # თუ შენი index.html ძირშია
-          # ან თუ dist საქაღალდეშია → publish_dir: ./dist
+          publish_dir: .
