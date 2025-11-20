@@ -1,31 +1,36 @@
-name: Run Cypress Tests
+name: Cypress Tests + Deploy to GitHub Pages
 
-# როდის უნდა გაშვებულიყო workflow
 on:
   push:
     branches:
-      - main # როდესაც main ბრანჩზე ხდება push
+      - main
   pull_request:
 
 jobs:
-  cypress-run:
+  cypress-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # კოდის ჩასაწერად
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # Node.js-ის ინსტალაცია
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
-      # Dependency-ების ინსტალაცია
       - name: Install dependencies
         run: npm ci
 
-      # Cypress ტესტების გაშვება
+      # 1. Cypress ტესტები
       - name: Run Cypress tests
         run: npx cypress run
+
+      # 2. Deploy GitHub Pages-ზე (მხოლოდ main branch-ზე push-ისას)
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # თუ შენი index.html ძირშია
+          # ან თუ dist საქაღალდეშია → publish_dir: ./dist
